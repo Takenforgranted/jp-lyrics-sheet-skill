@@ -39,16 +39,18 @@ FILE_PATTERNS = [
     "*_parsed.txt", "*_segments.txt", "*_dump.txt", "*_romaji.txt",
     # 一次性脚本（取词/解析/探测/核对）
     "fetch*.py", "parse*.py", "parse2.py", "probe_*.py", "dump_*.py",
-    "check_*.py", "scrape*.py",
+    "check_*.py", "scrape*.py", "inspect*.py", "calc_*.py", "render*.py",
     # 日志与临时记录
     "*.log", "*_log.txt", "build*.txt", "final*.txt", "gen_log.txt",
     "cleanup.txt", "clean*.txt", "*.tmp", "*.bak",
     # 渲染预览
-    "preview_p*.png",
+    "preview_p*.png", "*_page*.png",
 ]
 
 DIR_PATTERNS = [
     "preview", "_smoke", "__pycache__", ".cache", "tmp", "_tmp",
+    # 抓网页时落地的 HTML dump
+    "dump", "dumps",
 ]
 
 # 永远不碰

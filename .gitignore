@@ -7,6 +7,9 @@ venv/
 # 自检 / 渲染中间产物
 _smoke/
 preview_p*.png
+*_page*.png
+dump/
+dumps/
 *.bak
 *.tmp
 *.log

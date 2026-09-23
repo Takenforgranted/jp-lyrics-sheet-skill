@@ -55,9 +55,13 @@
   只有做「续页/局部片段」时才允许加 --no-title 关掉。
 
 配色规则：
-  由角色代表色 HSL 推导 —— 填充色 = 同色相、同饱和、亮度 90%；
-  边框色 = 同色相、亮度 32%（饱和上限 0.62）。未指定 singer 时沿用
-  参考版固定粉（填充 #f3d7d7 / 边框 #6e3636）。
+  由代表色 HSL 推导出三色，保证「底色浅、边框深、字色更深」：
+    · 填充色 = 同色相、同饱和、亮度 90%
+    · 边框色 = 同色相、亮度 32%（饱和上限 0.85）
+    · 字色   = 同色相、亮度 24% 起逐级压暗，直到对填充色的 WCAG 对比度 ≥ 7:1
+               （饱和上限 0.75；万一够不到就退化为纯黑/纯白中对比度更高的那个）
+  即字色不是死写黑，而是跟着底色走 —— 换任何代表色，正文都保持可读。
+  未指定 singer 时沿用参考版固定粉（填充 #f3d7d7 / 边框 #6e3636 / 字色默认黑）。
   已知配色登记在 references/colors.md。
 """
 
@@ -95,13 +99,41 @@ def _hex(rgb):
     return "#%02x%02x%02x" % tuple(max(0, min(255, round(c * 255))) for c in rgb)
 
 
+def _relative_luminance(rgb):
+    def f(c):
+        return c / 12.92 if c <= 0.03928 else ((c + 0.055) / 1.055) ** 2.4
+    r, g, b = (f(c) for c in rgb)
+    return 0.2126 * r + 0.7152 * g + 0.0722 * b
+
+
+def contrast(rgb1, rgb2):
+    """WCAG 对比度（1~21）。"""
+    l1, l2 = _relative_luminance(rgb1), _relative_luminance(rgb2)
+    hi, lo = max(l1, l2), min(l1, l2)
+    return (hi + 0.05) / (lo + 0.05)
+
+
 def derive(color):
-    """代表色 -> (填充色, 边框色)。亮度 90% / 32%，色相饱和沿用。"""
+    """代表色 -> (填充色, 边框色, 字色)。
+
+    填充/边框沿用参考版的亮度 90% / 32% 规则；字色由同一色相压暗而来，
+    并强制对填充色达到 WCAG 7:1，避免底色一变、字就看不清。
+    """
     r, g, b = _rgb(color)
     hh, ll, ss = colorsys.rgb_to_hls(r, g, b)
     fill = colorsys.hls_to_rgb(hh, 0.90, ss)
     border = colorsys.hls_to_rgb(hh, 0.32, min(ss, 0.85))
-    return _hex(fill), _hex(border)
+
+    text = None
+    for lightness in (0.24, 0.20, 0.16, 0.12, 0.08):
+        cand = colorsys.hls_to_rgb(hh, lightness, min(ss, 0.75))
+        if contrast(cand, fill) >= 7.0:
+            text = cand
+            break
+    if text is None:
+        black, white = (0.0, 0.0, 0.0), (1.0, 1.0, 1.0)
+        text = black if contrast(black, fill) >= contrast(white, fill) else white
+    return _hex(fill), _hex(border), _hex(text)
 
 
 class Palette:
@@ -142,9 +174,9 @@ class Palette:
         out = []
         for color in self.order:
             cls = self.map[color]
-            fill, border = derive(color)
-            out.append("table.jp-line.%s td { background: %s; border-color: %s; }"
-                       % (cls, fill, border))
+            fill, border, text = derive(color)
+            out.append("table.jp-line.%s td { background: %s; border-color: %s; color: %s; }"
+                       % (cls, fill, border, text))
         return "\n".join(out)
 
     def legend_html(self):
@@ -163,7 +195,7 @@ class Palette:
         for cl, label in by_color.items():
             if cl not in self.map:
                 continue          # 只显示本曲实际用到的角色
-            fill, border = derive(cl)
+            fill, border, _text = derive(cl)
             items.append(
                 '<span class="jp-lg"><i style="background:%s;border-color:%s"></i>%s</span>'
                 % (fill, border, label))
@@ -469,8 +501,10 @@ def main():
     if args.palettes:
         for name, e in (data.get("palette") or {}).items():
             color = e.get("color") if isinstance(e, dict) else e
-            fill, border = derive(color)
-            print("%-8s %-9s base=%s  fill=%s  border=%s" % (name, "", color, fill, border))
+            fill, border, text = derive(color)
+            ratio = contrast(_rgb(text), _rgb(fill))
+            print("%-8s base=%-9s fill=%s  border=%s  text=%s  (对比度 %.1f:1)"
+                  % (name, color, fill, border, text, ratio))
         return 0
 
     known = load_known_terms()

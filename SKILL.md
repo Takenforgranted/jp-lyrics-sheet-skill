@@ -37,8 +37,10 @@ jp-lyrics-sheet/
 │   ├── sample_kaminomanimani.json    样例数据（Aメロ+サビ 7 句，可直接跑）
 │   ├── sample_mix_shake.json         角色配色完整示例（スリーズブーケ《Mix shake!!》全曲 46 句）
 │   ├── sample_hikaru_nara.json       长曲全曲示例（《光るなら》27 句，演示 `ref` 复用副歌）
+│   ├── sample_sora_no_hako.json      单一「乐队主题色」示例（トゲナシトゲアリ《空の箱》全曲 39 句，
+│   │                                 配 `--legend --labels`；也是字色随底色推导的实测样例）
 │   └── reference/sample_*.pdf|png    参考成品（含页首标题区）
-├── examples/                         ★ 示例成果：《Mix shake!!》成品 PDF/HTML + 第 1 页预览图
+├── examples/                         ★ 示例成果：《Mix shake!!》色彩版、《空の箱》单色版（PDF/HTML + 预览图）
 └── tests/
     └── test_romaji.py                罗马音规则回归测试
 ```
@@ -56,7 +58,7 @@ jp-lyrics-sheet/
 - 表格居中，间距 11px；A4 竖版 `@page{size:A4;margin:14mm 10mm}`，
   `page-break-inside:avoid`，`print-color-adjust:exact`（保证粉色底不丢）
 - **页首标题区（硬要求，见下节）**：居中曲名 + 其下小字居中信息栏
-- **角色配色**：`--legend` 顶部渲图例；块/行可指定 `singer`，填充/边框色由代表色 HSL 推导（见下）
+- **角色配色**：`--legend` 顶部渲图例；块/行可指定 `singer`，填充/边框/**字色**三色由代表色 HSL 推导（见下）
 - 无页眉页脚，纯白背景
 
 要改样式只改 `gen_sheet.py` 里的 `CSS` 常量，改完全跑 `doctor.py --smoke` 目检。
@@ -101,7 +103,11 @@ jp-lyrics-sheet/
 - 数据里也可临时 `"palette": {"花帆": {"color": "#f8b500", "label": "日野下花帆"}}`，
   同名条目会覆盖注册表。
 - **色值推导**（HSL）：填充 = 同色相同饱和、亮度 90%；边框 = 同色相、亮度 32%
-  （饱和上限 0.85）。未指定 `singer` 时沿用参考版固定粉。
+  （饱和上限 0.85）；**字色 = 同色相、亮度 24% 起逐级压暗（饱和上限 0.75），
+  直到对填充色的 WCAG 对比度 ≥ 7:1**，够不到就退化为纯黑/纯白里对比度更高的那个。
+  未指定 `singer` 时沿用参考版固定粉（填充 `#f3d7d7` / 边框 `#6e3636`，字色不覆盖即默认黑）。
+- **用户说「字色要适配底色 / 保证可读性」时**，就是上面第三条在起作用：不用手写颜色，
+  底色偏浅（黄・青）或偏深都不会糊。核对该曲实际推导结果用 `--palettes`（会打印对比度）。
 - 指定层级：块级 `"singer"` → 行级 `"singer"` 覆盖块级 → 都没有则默认粉。
   行内多人接唱时，该行颜色取**首段**歌手（萌百页面也是这么标色的）。
 - `--legend` 会在顶部渲一行图例（色块 + 角色名），配色版必加。
@@ -175,7 +181,8 @@ build.py song.html                                        # 产 song.pdf + 前 3
 再看字体、断行、配色、翻译行。确认无误后 `present_files`：**PDF 在前，HTML 随后**。
 
 想要个「好看长什么样」的参照，直接看 `examples/Mix_Shake!!_歌词分解表.pdf`
-（全曲 46 句、角色配色版、6 页，`examples/mix_shake_p1.png` 是第 1 页预览图）。
+（全曲 46 句、角色配色版、6 页，`examples/mix_shake_p1.png` 是第 1 页预览图）；
+单主题色 + 字色随底色推导的参照看 `examples/空の箱_逐词分解表.pdf`（全曲 39 句、`--labels`）。
 
 ### 7. 收尾清理（必做，交付完立刻跑）
 

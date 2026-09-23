@@ -1,0 +1,467 @@
+{
+  "title": "空の箱",
+  "meta": {
+    "歌": "トゲナシトゲアリ（井芹仁菜・河原木桃香）",
+    "作詞": "松原さらり",
+    "作曲": "南田健吾",
+    "編曲": "玉井健二・南田健吾",
+    "訳名": "空箱（Void）",
+    "収録": "6th シングル《雑踏、僕らの街》（2024.05.22）C/W",
+    "タイアップ": "TVアニメ『ガールズバンドクライ』第1話 挿入歌"
+  },
+  "scheme": "spec",
+  "palette": {
+    "トゲナシトゲアリ": { "color": "#e21b1b", "label": "トゲナシトゲアリ（有刺無刺）" }
+  },
+  "blocks": [
+    {
+      "id": "Aメロ",
+      "singer": "トゲナシトゲアリ",
+      "lines": [
+        {
+          "words": [
+            { "kana": "やけに", "kanji": "やけに", "grammar": "副詞", "gloss": "异常地" },
+            { "kana": "しろい", "kanji": "白い", "grammar": "い形容詞", "gloss": "白" },
+            { "kana": "ん", "kanji": "ん", "grammar": "文法「のだ」", "gloss": "（强调）" },
+            { "kana": "だ", "kanji": "だ", "grammar": "助動詞", "gloss": "是" }
+          ],
+          "trans": "白得反常"
+        },
+        {
+          "words": [
+            { "kana": "やたら", "kanji": "やたら", "grammar": "副詞", "gloss": "格外地" },
+            { "kana": "ながい", "kanji": "長い", "grammar": "い形容詞", "gloss": "长" },
+            { "kana": "ん", "kanji": "ん", "grammar": "文法「のだ」", "gloss": "（强调）" },
+            { "kana": "だ", "kanji": "だ", "grammar": "助動詞", "gloss": "是" }
+          ],
+          "trans": "长得没完没了"
+        },
+        {
+          "words": [
+            { "kana": "こたえ", "kanji": "コタエ", "grammar": "名詞", "gloss": "答案" },
+            { "kana": "は", "kanji": "は", "grammar": "助詞", "gloss": "（主题）" },
+            { "kana": "だいたい", "kanji": "だいたい", "grammar": "副詞", "gloss": "多半" },
+            { "kana": "かたち", "kanji": "カタチ", "grammar": "名詞", "gloss": "形状" },
+            { "kana": "ばかり", "kanji": "ばかり", "grammar": "助詞", "gloss": "只是" },
+            { "kana": "の", "kanji": "の", "grammar": "助詞", "gloss": "的" },
+            { "kana": "じょうしき", "kanji": "常識", "grammar": "名詞", "gloss": "常识" },
+            { "kana": "だろう", "kanji": "だろう", "grammar": "助動詞", "gloss": "大概吧" }
+          ],
+          "trans": "答案多半只是徒有其形的常识吧"
+        },
+        {
+          "words": [
+            { "kana": "ゆびさき", "kanji": "指先", "grammar": "名詞", "gloss": "指尖" },
+            { "kana": "が", "kanji": "が", "grammar": "助詞", "gloss": "（主语）" },
+            { "kana": "ふるえよう", "kanji": "震えよう", "grammar": "動詞（意向形）", "gloss": "颤抖" },
+            { "kana": "とも", "kanji": "とも", "grammar": "助詞", "gloss": "即使" }
+          ],
+          "trans": "就算指尖在发抖"
+        },
+        {
+          "words": [
+            { "kana": "ちず", "kanji": "地図", "grammar": "名詞", "gloss": "地图" },
+            { "kana": "に", "kanji": "に", "grammar": "助詞", "gloss": "在" },
+            { "kana": "は", "kanji": "は", "grammar": "助詞", "gloss": "（对比）" },
+            { "kana": "ない", "kanji": "ない", "grammar": "い形容詞", "gloss": "没有" },
+            { "kana": "はず", "kanji": "はず", "grammar": "形式名詞", "gloss": "理应" },
+            { "kana": "の", "kanji": "の", "grammar": "助詞", "gloss": "的" },
+            { "kana": "さんさろ", "kanji": "三叉路", "grammar": "名詞", "gloss": "三岔路" },
+            { "kana": "に", "kanji": "に", "grammar": "助詞", "gloss": "在" },
+            { "kana": "いま", "kanji": "今", "grammar": "名詞", "gloss": "现在" }
+          ],
+          "trans": "此刻正站在本不该出现在地图上的三岔路口"
+        },
+        {
+          "words": [
+            { "kana": "ぶつかって", "kanji": "ぶつかって", "grammar": "動詞（て形）", "gloss": "撞上" },
+            { "kana": "いる", "kanji": "いる", "grammar": "補助動詞", "gloss": "正在" },
+            { "kana": "の", "kanji": "の", "grammar": "形式名詞", "gloss": "（说明）" },
+            { "kana": "です", "kanji": "です", "grammar": "助動詞", "gloss": "是" },
+            { "kana": "が", "kanji": "が", "grammar": "接続助詞", "gloss": "可是" }
+          ],
+          "trans": "正撞了上去，可是"
+        },
+        {
+          "words": [
+            { "kana": "なに", "kanji": "何", "grammar": "疑問詞", "gloss": "什么" },
+            { "kana": "を", "kanji": "を", "grammar": "助詞", "gloss": "（宾语）" },
+            { "kana": "たより", "kanji": "頼り", "grammar": "名詞", "gloss": "依靠" },
+            { "kana": "に", "kanji": "に", "grammar": "助詞", "gloss": "作为" },
+            { "kana": "すすめば", "kanji": "進めば", "grammar": "動詞（ば形）", "gloss": "前进" },
+            { "kana": "いい", "kanji": "いい", "grammar": "い形容詞", "gloss": "好" },
+            { "kana": "の", "kanji": "の", "grammar": "形式名詞", "gloss": "（说明）" },
+            { "kana": "でしょう", "kanji": "でしょう", "grammar": "助動詞", "gloss": "吧" },
+            { "kana": "か", "kanji": "か", "grammar": "助詞", "gloss": "呢" }
+          ],
+          "trans": "该靠着什么继续往前走才好呢"
+        },
+        {
+          "words": [
+            { "kana": "きょうかしょ", "kanji": "教科書", "grammar": "名詞", "gloss": "教科书" },
+            { "kana": "どおり", "kanji": "通り", "grammar": "名詞", "gloss": "原样" },
+            { "kana": "と", "kanji": "と", "grammar": "助詞", "gloss": "（引用）" },
+            { "kana": "は", "kanji": "は", "grammar": "助詞", "gloss": "（主题）" },
+            { "kana": "よく", "kanji": "よく", "grammar": "副詞", "gloss": "真" },
+            { "kana": "いった", "kanji": "言った", "grammar": "動詞（た形）", "gloss": "说了" },
+            { "kana": "もの", "kanji": "もの", "grammar": "形式名詞", "gloss": "东西" },
+            { "kana": "で", "kanji": "で", "grammar": "接続助詞", "gloss": "而" }
+          ],
+          "trans": "「照着教科书来」这话说得可真准"
+        },
+        {
+          "words": [
+            { "kana": "むずかしい", "kanji": "難しい", "grammar": "い形容詞", "gloss": "难懂" },
+            { "kana": "ことば", "kanji": "言葉", "grammar": "名詞", "gloss": "词句" },
+            { "kana": "だらけ", "kanji": "だらけ", "grammar": "接尾辞", "gloss": "满篇" }
+          ],
+          "trans": "满纸都是难懂的字眼"
+        },
+        {
+          "words": [
+            { "kana": "こんにち", "kanji": "今日", "grammar": "名詞", "gloss": "如今" },
+            { "kana": "あの", "kanji": "あの", "grammar": "指示詞", "gloss": "那个" },
+            { "kana": "ころ", "kanji": "頃", "grammar": "名詞", "gloss": "时候" },
+            { "kana": "から", "kanji": "から", "grammar": "助詞", "gloss": "从" },
+            { "kana": "すこし", "kanji": "少し", "grammar": "副詞", "gloss": "一点" },
+            { "kana": "も", "kanji": "も", "grammar": "助詞", "gloss": "也" },
+            { "kana": "かわらない", "kanji": "変わらない", "grammar": "動詞（ない形）", "gloss": "没变" }
+          ],
+          "trans": "如今跟那时候相比一点都没变"
+        },
+        {
+          "words": [
+            { "kana": "この", "kanji": "この", "grammar": "指示詞", "gloss": "这个" },
+            { "kana": "くうらん", "kanji": "空欄", "grammar": "名詞", "gloss": "空格" },
+            { "kana": "を", "kanji": "を", "grammar": "助詞", "gloss": "（宾语）" },
+            { "kana": "うめれば", "kanji": "埋めれば", "grammar": "動詞（ば形）", "gloss": "填上" },
+            { "kana": "とけます", "kanji": "解けます", "grammar": "動詞（ます形去ます）", "gloss": "解开" },
+            { "kana": "か", "kanji": "か", "grammar": "助詞", "gloss": "吗" },
+            { "kana": "いつ", "kanji": "いつ", "grammar": "疑問詞", "gloss": "何时" },
+            { "kana": "の", "kanji": "の", "grammar": "助詞", "gloss": "的" },
+            { "kana": "ひ", "kanji": "日", "grammar": "名詞", "gloss": "日子" },
+            { "kana": "か", "kanji": "か", "grammar": "助詞", "gloss": "（不定）" }
+          ],
+          "trans": "把这个空格填上就能解开了吗，在将来的某一天"
+        },
+        {
+          "words": [
+            { "kana": "あなた", "kanji": "あなた", "grammar": "名詞", "gloss": "你" },
+            { "kana": "なら", "kanji": "なら", "grammar": "助動詞", "gloss": "的话" },
+            { "kana": "どうやって", "kanji": "どうやって", "grammar": "副詞", "gloss": "怎么做" },
+            { "kana": "さき", "kanji": "先", "grammar": "名詞", "gloss": "前方" },
+            { "kana": "へ", "kanji": "へ", "grammar": "助詞", "gloss": "向" },
+            { "kana": "と", "kanji": "と", "grammar": "助詞", "gloss": "（与…）" },
+            { "kana": "すすめます", "kanji": "進みます", "grammar": "動詞（ます形去ます）", "gloss": "迈进" },
+            { "kana": "か", "kanji": "か", "grammar": "助詞", "gloss": "呢" }
+          ],
+          "trans": "若是你的话，会怎么往前迈步呢"
+        }
+      ]
+    },
+    {
+      "id": "サビ",
+      "singer": "トゲナシトゲアリ",
+      "lines": [
+        {
+          "words": [
+            { "kana": "やけに", "kanji": "やけに", "grammar": "副詞", "gloss": "异常地" },
+            { "kana": "しろい", "kanji": "白い", "grammar": "い形容詞", "gloss": "白" },
+            { "kana": "ん", "kanji": "ん", "grammar": "文法「のだ」", "gloss": "（强调）" },
+            { "kana": "だ", "kanji": "だ", "grammar": "助動詞", "gloss": "是" }
+          ],
+          "trans": "白得反常"
+        },
+        {
+          "words": [
+            { "kana": "やたら", "kanji": "やたら", "grammar": "副詞", "gloss": "格外地" },
+            { "kana": "ながい", "kanji": "長い", "grammar": "い形容詞", "gloss": "长" },
+            { "kana": "ん", "kanji": "ん", "grammar": "文法「のだ」", "gloss": "（强调）" },
+            { "kana": "だ", "kanji": "だ", "grammar": "助動詞", "gloss": "是" }
+          ],
+          "trans": "长得没完没了"
+        },
+        {
+          "words": [
+            { "kana": "こたえ", "kanji": "コタエ", "grammar": "名詞", "gloss": "答案" },
+            { "kana": "は", "kanji": "は", "grammar": "助詞", "gloss": "（主题）" },
+            { "kana": "だいたい", "kanji": "だいたい", "grammar": "副詞", "gloss": "多半" },
+            { "kana": "かたち", "kanji": "カタチ", "grammar": "名詞", "gloss": "形状" },
+            { "kana": "ばかり", "kanji": "ばかり", "grammar": "助詞", "gloss": "只是" },
+            { "kana": "の", "kanji": "の", "grammar": "助詞", "gloss": "的" },
+            { "kana": "じょうしき", "kanji": "常識", "grammar": "名詞", "gloss": "常识" },
+            { "kana": "だろう", "kanji": "だろう", "grammar": "助動詞", "gloss": "大概吧" }
+          ],
+          "trans": "答案多半只是徒有其形的常识吧"
+        },
+        {
+          "words": [
+            { "kana": "ゆびさき", "kanji": "指先", "grammar": "名詞", "gloss": "指尖" },
+            { "kana": "が", "kanji": "が", "grammar": "助詞", "gloss": "（主语）" },
+            { "kana": "ふるえよう", "kanji": "震えよう", "grammar": "動詞（意向形）", "gloss": "颤抖" },
+            { "kana": "とも", "kanji": "とも", "grammar": "助詞", "gloss": "即使" }
+          ],
+          "trans": "就算指尖在发抖"
+        },
+        {
+          "words": [
+            { "kana": "せいかい", "kanji": "正解", "grammar": "名詞", "gloss": "正确答案" },
+            { "kana": "は", "kanji": "は", "grammar": "助詞", "gloss": "（主题）" },
+            { "kana": "ない", "kanji": "無い", "grammar": "い形容詞", "gloss": "没有" },
+            { "kana": "ん", "kanji": "ん", "grammar": "文法「のだ」", "gloss": "（强调）" },
+            { "kana": "だ", "kanji": "だ", "grammar": "助動詞", "gloss": "是" }
+          ],
+          "trans": "根本没有什么正确答案"
+        },
+        {
+          "words": [
+            { "kana": "まけ", "kanji": "負け", "grammar": "名詞", "gloss": "输" },
+            { "kana": "なんて", "kanji": "なんて", "grammar": "助詞", "gloss": "之类" },
+            { "kana": "ない", "kanji": "無い", "grammar": "い形容詞", "gloss": "没有" },
+            { "kana": "ん", "kanji": "ん", "grammar": "文法「のだ」", "gloss": "（强调）" },
+            { "kana": "だ", "kanji": "だ", "grammar": "助動詞", "gloss": "是" }
+          ],
+          "trans": "也谈不上什么输赢"
+        },
+        {
+          "words": [
+            { "kana": "あたし", "kanji": "あたし", "grammar": "名詞", "gloss": "我" },
+            { "kana": "は", "kanji": "は", "grammar": "助詞", "gloss": "（主题）" },
+            { "kana": "しょうがい", "kanji": "生涯", "grammar": "名詞", "gloss": "一辈子" },
+            { "kana": "あたし", "kanji": "あたし", "grammar": "名詞", "gloss": "我" },
+            { "kana": "で", "kanji": "で", "grammar": "助動詞", "gloss": "是" },
+            { "kana": "あって", "kanji": "あって", "grammar": "動詞（て形）", "gloss": "就是" },
+            { "kana": "それ", "kanji": "それ", "grammar": "指示詞", "gloss": "那" },
+            { "kana": "だけ", "kanji": "だけ", "grammar": "助詞", "gloss": "只" },
+            { "kana": "だろう", "kanji": "だろう", "grammar": "助動詞", "gloss": "就够吧" }
+          ],
+          "trans": "我这一辈子，只要做我自己就够了"
+        },
+        {
+          "words": [
+            { "kana": "これ", "kanji": "これ", "grammar": "指示詞", "gloss": "这个" },
+            { "kana": "いじょう", "kanji": "以上", "grammar": "名詞", "gloss": "以上" },
+            { "kana": "かきみだして", "kanji": "かき乱して", "grammar": "動詞（て形）", "gloss": "搅乱" },
+            { "kana": "も", "kanji": "も", "grammar": "助詞", "gloss": "也" },
+            { "kana": "あした", "kanji": "明日", "grammar": "名詞", "gloss": "明天" },
+            { "kana": "は", "kanji": "は", "grammar": "助詞", "gloss": "（主题）" },
+            { "kana": "ない", "kanji": "ない", "grammar": "い形容詞", "gloss": "没有" }
+          ],
+          "trans": "再怎么搅乱下去也不会迎来明天"
+        }
+      ]
+    },
+    {
+      "id": "Bメロ",
+      "singer": "トゲナシトゲアリ",
+      "lines": [
+        {
+          "words": [
+            { "kana": "やくだたない", "kanji": "役立たない", "grammar": "動詞（ない形）", "gloss": "没用" },
+            { "kana": "ちず", "kanji": "地図", "grammar": "名詞", "gloss": "地图" },
+            { "kana": "の", "kanji": "の", "grammar": "助詞", "gloss": "的" },
+            { "kana": "せい", "kanji": "所為", "grammar": "名詞", "gloss": "过错" },
+            { "kana": "に", "kanji": "に", "grammar": "助詞", "gloss": "（对象）" },
+            { "kana": "して", "kanji": "して", "grammar": "動詞（て形）", "gloss": "归咎" },
+            { "kana": "いま", "kanji": "今", "grammar": "名詞", "gloss": "现在" }
+          ],
+          "trans": "现在就把过错推给那张派不上用场的地图"
+        },
+        {
+          "words": [
+            { "kana": "とほう", "kanji": "途方", "grammar": "名詞", "gloss": "方寸" },
+            { "kana": "に", "kanji": "に", "grammar": "助詞", "gloss": "（对象）" },
+            { "kana": "くれて", "kanji": "暮れて", "grammar": "動詞（て形）", "gloss": "不知所措" },
+            { "kana": "います", "kanji": "います", "grammar": "補助動詞", "gloss": "正在" },
+            { "kana": "が", "kanji": "が", "grammar": "接続助詞", "gloss": "但是" }
+          ],
+          "trans": "虽然正茫然不知所措"
+        },
+        {
+          "words": [
+            { "kana": "つよがった", "kanji": "強がった", "grammar": "動詞（た形）", "gloss": "逞强" },
+            { "kana": "として", "kanji": "として", "grammar": "助詞", "gloss": "就算" },
+            { "kana": "けっか", "kanji": "結果", "grammar": "名詞", "gloss": "结果" },
+            { "kana": "は", "kanji": "は", "grammar": "助詞", "gloss": "（主题）" },
+            { "kana": "おそらく", "kanji": "おそらく", "grammar": "副詞", "gloss": "恐怕" },
+            { "kana": "おなじ", "kanji": "同じ", "grammar": "な形容詞（終止形）", "gloss": "一样" }
+          ],
+          "trans": "就算逞强，结果恐怕也一样"
+        },
+        {
+          "words": [
+            { "kana": "あふれだし", "kanji": "溢れだし", "grammar": "動詞（ます形去ます）", "gloss": "溢出" },
+            { "kana": "そうな", "kanji": "そうな", "grammar": "比況助動詞", "gloss": "像是" },
+            { "kana": "ほど", "kanji": "ほど", "grammar": "助詞", "gloss": "程度" },
+            { "kana": "つめこんだ", "kanji": "詰め込んだ", "grammar": "動詞（た形）", "gloss": "塞满" }
+          ],
+          "trans": "塞得几乎要满出来"
+        },
+        {
+          "words": [
+            { "kana": "たにん", "kanji": "他人", "grammar": "名詞", "gloss": "别人" },
+            { "kana": "の", "kanji": "の", "grammar": "助詞", "gloss": "的" },
+            { "kana": "はこ", "kanji": "箱", "grammar": "名詞", "gloss": "箱子" },
+            { "kana": "を", "kanji": "を", "grammar": "助詞", "gloss": "（宾语）" },
+            { "kana": "よこめ", "kanji": "横目", "grammar": "名詞", "gloss": "斜眼" },
+            { "kana": "に", "kanji": "に", "grammar": "助詞", "gloss": "用" }
+          ],
+          "trans": "只用眼角瞟着别人的箱子"
+        },
+        {
+          "words": [
+            { "kana": "へたな", "kanji": "下手な", "grammar": "な形容詞（連体形）", "gloss": "笨拙" },
+            { "kana": "あいそうわらい", "kanji": "愛想笑い", "grammar": "名詞", "gloss": "陪笑" },
+            { "kana": "すら", "kanji": "すら", "grammar": "助詞", "gloss": "连…都" }
+          ],
+          "trans": "连那种笨拙的陪笑"
+        },
+        {
+          "words": [
+            { "kana": "やっぱり", "kanji": "やっぱり", "grammar": "副詞", "gloss": "果然" },
+            { "kana": "できて", "kanji": "出来て", "grammar": "動詞（て形）", "gloss": "做到" },
+            { "kana": "ない", "kanji": "ない", "grammar": "い形容詞", "gloss": "没有" }
+          ],
+          "trans": "果然还是做不来"
+        },
+        {
+          "words": [
+            { "kana": "こんな", "kanji": "こんな", "grammar": "指示詞", "gloss": "这样的" },
+            { "kana": "くうらん", "kanji": "空欄", "grammar": "名詞", "gloss": "空格" },
+            { "kana": "さえ", "kanji": "さえ", "grammar": "助詞", "gloss": "连…都" },
+            { "kana": "なけれ", "kanji": "なけれ", "grammar": "い形容詞", "gloss": "没有" },
+            { "kana": "ば", "kanji": "ば", "grammar": "接続助詞", "gloss": "如果" }
+          ],
+          "trans": "要是没有这样的空格"
+        },
+        {
+          "words": [
+            { "kana": "あなた", "kanji": "あなた", "grammar": "名詞", "gloss": "你" },
+            { "kana": "も", "kanji": "も", "grammar": "助詞", "gloss": "也" },
+            { "kana": "おもう", "kanji": "思う", "grammar": "動詞（原形）", "gloss": "想" },
+            { "kana": "でしょう", "kanji": "でしょう", "grammar": "助動詞", "gloss": "吧" }
+          ],
+          "trans": "你也会这么想吧"
+        },
+        {
+          "words": [
+            { "kana": "このまま", "kanji": "このまま", "grammar": "名詞", "gloss": "就这样" },
+            { "kana": "で", "kanji": "で", "grammar": "助詞", "gloss": "保持" },
+            { "kana": "いい", "kanji": "いい", "grammar": "い形容詞", "gloss": "好" },
+            { "kana": "なんて", "kanji": "なんて", "grammar": "助詞", "gloss": "（引用）" }
+          ],
+          "trans": "「就这样下去也可以」这种话"
+        },
+        {
+          "words": [
+            { "kana": "それ", "kanji": "それ", "grammar": "指示詞", "gloss": "那" },
+            { "kana": "だけ", "kanji": "だけ", "grammar": "助詞", "gloss": "只" },
+            { "kana": "は", "kanji": "は", "grammar": "助詞", "gloss": "（主题）" },
+            { "kana": "まちがい", "kanji": "間違い", "grammar": "名詞", "gloss": "错" },
+            { "kana": "だ", "kanji": "だ", "grammar": "助動詞", "gloss": "是" }
+          ],
+          "trans": "唯独这一点是错的"
+        }
+      ]
+    },
+    {
+      "id": "ラストサビ",
+      "singer": "トゲナシトゲアリ",
+      "lines": [
+        {
+          "words": [
+            { "kana": "からっぽ", "kanji": "空っぽ", "grammar": "名詞", "gloss": "空无一物" },
+            { "kana": "な", "kanji": "な", "grammar": "助動詞", "gloss": "的" },
+            { "kana": "ん", "kanji": "ん", "grammar": "文法「のだ」", "gloss": "（强调）" },
+            { "kana": "だ", "kanji": "だ", "grammar": "助動詞", "gloss": "是" }
+          ],
+          "trans": "空空如也"
+        },
+        {
+          "words": [
+            { "kana": "ひとつ", "kanji": "ひとつ", "grammar": "名詞", "gloss": "一个" },
+            { "kana": "も", "kanji": "も", "grammar": "助詞", "gloss": "也" },
+            { "kana": "ない", "kanji": "無い", "grammar": "い形容詞", "gloss": "没有" },
+            { "kana": "ん", "kanji": "ん", "grammar": "文法「のだ」", "gloss": "（强调）" },
+            { "kana": "だ", "kanji": "だ", "grammar": "助動詞", "gloss": "是" }
+          ],
+          "trans": "一个也没有"
+        },
+        {
+          "words": [
+            { "kana": "なくなった", "kanji": "無くなった", "grammar": "動詞（た形）", "gloss": "失去了" },
+            { "kana": "の", "kanji": "の", "grammar": "形式名詞", "gloss": "（说明）" },
+            { "kana": "か", "kanji": "か", "grammar": "助詞", "gloss": "呢" },
+            { "kana": "はじまった", "kanji": "始まった", "grammar": "動詞（た形）", "gloss": "开始了" },
+            { "kana": "の", "kanji": "の", "grammar": "形式名詞", "gloss": "（说明）" },
+            { "kana": "か", "kanji": "か", "grammar": "助詞", "gloss": "呢" },
+            { "kana": "わからない", "kanji": "分からない", "grammar": "動詞（ない形）", "gloss": "不明白" },
+            { "kana": "けど", "kanji": "けど", "grammar": "接続助詞", "gloss": "但是" }
+          ],
+          "trans": "不知道是失去了，还是才刚开始，但"
+        },
+        {
+          "words": [
+            { "kana": "いく", "kanji": "行く", "grammar": "動詞（原形）", "gloss": "走" },
+            { "kana": "しか", "kanji": "しか", "grammar": "助詞", "gloss": "只有" },
+            { "kana": "ほうほう", "kanji": "方法", "grammar": "名詞", "gloss": "办法" },
+            { "kana": "は", "kanji": "は", "grammar": "助詞", "gloss": "（主题）" },
+            { "kana": "ない", "kanji": "無い", "grammar": "い形容詞", "gloss": "没有" },
+            { "kana": "ん", "kanji": "ん", "grammar": "文法「のだ」", "gloss": "（强调）" },
+            { "kana": "だろう", "kanji": "だろう", "grammar": "助動詞", "gloss": "吧" }
+          ],
+          "trans": "除了往前走，也没有别的办法了吧？"
+        },
+        {
+          "words": [
+            { "kana": "せいかい", "kanji": "正解", "grammar": "名詞", "gloss": "正确答案" },
+            { "kana": "が", "kanji": "が", "grammar": "助詞", "gloss": "（主语）" },
+            { "kana": "なんだ", "kanji": "なんだ", "grammar": "文法「のだ」", "gloss": "算什么" },
+            { "kana": "かち", "kanji": "価値", "grammar": "名詞", "gloss": "价值" },
+            { "kana": "なんて", "kanji": "なんて", "grammar": "助詞", "gloss": "之类" },
+            { "kana": "ない", "kanji": "無い", "grammar": "い形容詞", "gloss": "没有" },
+            { "kana": "ん", "kanji": "ん", "grammar": "文法「のだ」", "gloss": "（强调）" },
+            { "kana": "だ", "kanji": "だ", "grammar": "助動詞", "gloss": "是" }
+          ],
+          "trans": "正确答案算什么，根本没有价值"
+        },
+        {
+          "words": [
+            { "kana": "あたし", "kanji": "あたし", "grammar": "名詞", "gloss": "我" },
+            { "kana": "は", "kanji": "は", "grammar": "助詞", "gloss": "（主题）" },
+            { "kana": "しょうがい", "kanji": "生涯", "grammar": "名詞", "gloss": "一辈子" },
+            { "kana": "あたし", "kanji": "あたし", "grammar": "名詞", "gloss": "我" },
+            { "kana": "いがい", "kanji": "以外", "grammar": "名詞", "gloss": "以外" },
+            { "kana": "じゃ", "kanji": "じゃ", "grammar": "口語「では」", "gloss": "不是" },
+            { "kana": "いきられない", "kanji": "生きられない", "grammar": "動詞（可能形）", "gloss": "活不下去" },
+            { "kana": "よ", "kanji": "よ", "grammar": "助詞", "gloss": "（语气）" }
+          ],
+          "trans": "我这一辈子，不做自己就活不下去啊"
+        },
+        {
+          "words": [
+            { "kana": "これ", "kanji": "これ", "grammar": "指示詞", "gloss": "这个" },
+            { "kana": "いじょう", "kanji": "以上", "grammar": "名詞", "gloss": "以上" },
+            { "kana": "かきみだして", "kanji": "かき乱して", "grammar": "動詞（て形）", "gloss": "搅乱" },
+            { "kana": "も", "kanji": "も", "grammar": "助詞", "gloss": "也" },
+            { "kana": "あした", "kanji": "明日", "grammar": "名詞", "gloss": "明天" },
+            { "kana": "は", "kanji": "は", "grammar": "助詞", "gloss": "（主题）" },
+            { "kana": "ない", "kanji": "ない", "grammar": "い形容詞", "gloss": "没有" }
+          ],
+          "trans": "再怎么搅乱下去也不会迎来明天"
+        },
+        {
+          "words": [
+            { "kana": "どう", "kanji": "どう", "grammar": "副詞", "gloss": "怎么" },
+            { "kana": "あがいて", "kanji": "足掻いて", "grammar": "動詞（て形）", "gloss": "挣扎" },
+            { "kana": "も", "kanji": "も", "grammar": "助詞", "gloss": "也" },
+            { "kana": "あした", "kanji": "明日", "grammar": "名詞", "gloss": "明天" },
+            { "kana": "は", "kanji": "は", "grammar": "助詞", "gloss": "（主题）" },
+            { "kana": "ない", "kanji": "ない", "grammar": "い形容詞", "gloss": "没有" }
+          ],
+          "trans": "无论怎么挣扎也不会迎来明天"
+        }
+      ]
+    }
+  ]
+}

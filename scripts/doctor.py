@@ -96,7 +96,25 @@ def main():
         print("%s romaji %-8s -> %-22s (期望 %s)" % (flag, src, got, want))
     fail += bad
 
-    # 6. 端到端
+    # 6. 配色推导：字色必须跟着底色走，且对底色保持可读对比度
+    from gen_sheet import Palette, contrast, derive, _rgb
+    probes = ["#e21b1b", "#f8b500", "#68be8d", "#5383c3", "#eeda01", "#c8c2c6"]
+    worst = min(((c, contrast(_rgb(derive(c)[2]), _rgb(derive(c)[0]))) for c in probes),
+                key=lambda x: x[1])
+    if worst[1] >= 7.0:
+        print("%s 配色推导 字色随底色推导，最低对比度 %.1f:1（≥7:1）" % (OK, worst[1]))
+    else:
+        print("%s 配色推导 对比度不足 %.1f:1 -> %s" % (BAD, worst[1], worst[0]))
+        fail += 1
+    pal = Palette({"X": {"color": "#e21b1b", "label": "X"}})
+    pal.css_class("#e21b1b")
+    if "color:" in pal.css_rules():
+        print("%s 配色推导 CSS 里已写死字色（color: …）" % OK)
+    else:
+        print("%s 配色推导 CSS 缺 color: 规则，字色不会随底色适配" % BAD)
+        fail += 1
+
+    # 7. 端到端
     if args.smoke:
         print("\n--- smoke ---")
         out = os.path.join(SKILL, "_smoke")

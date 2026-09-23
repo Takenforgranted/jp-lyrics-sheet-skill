@@ -31,7 +31,7 @@
 | **六行逐词表格** | 每句一组表格，逐词一列：罗马音 → 假名 → 写法 → 语法 → 词义 → 整句翻译 |
 | **页首标题区** | 成品开头固定为**居中曲名** + 其下**小字居中的信息栏**（作詞 / 作曲 / 編曲 / 歌 / Center / 収録） |
 | **罗马音引擎** | 内置假名→罗马音转换，处理促音、长音、拗音、助词 `は/へ/を`；支持 `spec` 与 `hepburn` 双方案 |
-| **角色配色** | 独唱 / 合唱分色，填充与边框由代表色按 HSL 自动推导；代表色注册表可积累复用 |
+| **角色配色** | 独唱 / 合唱分色，**填充 / 边框 / 字色**三色由代表色按 HSL 自动推导；字色强制对底色保持 WCAG ≥ 7:1（AAA 级可读）；代表色注册表可积累复用 |
 | **打印友好** | A4 竖版、`page-break-inside: avoid`、`print-color-adjust: exact`，粉底不会丢 |
 | **零手工依赖** | 自带环境自检、清理、脱敏、打包四个辅助脚本 |
 
@@ -59,13 +59,14 @@
 
 ## 自带样例数据（assets/）
 
-三份可以直接跑的数据，覆盖从最小样例到长曲全曲：
+四份可以直接跑的数据，覆盖从最小样例到长曲全曲：
 
 | 文件 | 内容 | 演示重点 |
 | --- | --- | --- |
 | `sample_kaminomanimani.json` | 《神のまにまに》Aメロ + サビ，7 句 | 最小可用样例（`doctor.py --smoke` 就用它做端到端） |
 | `sample_mix_shake.json` | 《Mix shake!!》全曲 46 句 | 角色 / 合唱分色：`singer` + `--legend` |
 | `sample_hikaru_nara.json` | 《光るなら》全曲 27 句 | 长曲结构，用 `{"ref": "サビ"}` 复用重复段落 |
+| `sample_sora_no_hako.json` | 《空の箱》全曲 39 句 | 单一「团队主题色」+ `--labels`；字色随底色推导的实测样例 |
 
 ```bash
 python scripts/gen_sheet.py --data assets/sample_mix_shake.json --out demo.html --legend
@@ -74,7 +75,9 @@ python scripts/build.py demo.html
 
 ## 示例成果（examples/）
 
-`examples/` 里放了一份**完整的真实成品**——《Mix shake!!》全曲 46 句、角色配色版，可直接打开看效果：
+`examples/` 里放了两份**完整的真实成品**，可直接打开看效果：
+
+**①《Mix shake!!》全曲 46 句，角色配色版（多角色分色）**
 
 | 文件 | 说明 |
 | --- | --- |
@@ -87,6 +90,19 @@ python scripts/build.py demo.html
 第 1 页就能看到完整结构：**居中曲名** → **小字居中信息栏**（歌 / 作詞 / 作曲・編曲 / 収録 / Center）
 → 角色配色图例 → 逐句六行表格（罗马音 / 假名 / 写法 / 语法 / 词义 / 整句翻译），
 不同角色用各自代表色区分（日野下花帆 黄 / 乙宗梢 绿 / 合唱 红）。
+
+**②《空の箱》全曲 39 句，单一主题色版（字色随底色推导）**
+
+| 文件 | 说明 |
+| --- | --- |
+| [`空の箱_逐词分解表.pdf`](examples/空の箱_逐词分解表.pdf) | 成品 PDF：A4 竖版 **6 页**，单色 + `--labels` 段落标签 |
+| [`sora_no_hako_p1.png`](examples/sora_no_hako_p1.png) | 第 1 页预览图 |
+
+![《空の箱》第 1 页预览](examples/sora_no_hako_p1.png)
+
+整首歌只用一个「团队主题色」（乐队品牌红 `#e21b1b`），推导结果是底色 `#fad1d1` /
+边框 `#921111` / **字色 `#6b0f0f`** —— 字色跟着底色走，对底色对比度 **8.9:1**，
+所以红底上不会出现糊掉的黑字。
 
 ## 快速开始
 
@@ -159,7 +175,7 @@ python scripts/build.py song.html
 | `gen_sheet.py --data x.json --out x.html` | 生成 HTML |
 | `gen_sheet.py --data x.json --legend` | 顶部渲染角色配色图例（配色版必加） |
 | `gen_sheet.py --data x.json --check` | 只做数据体检，不产出文件 |
-| `gen_sheet.py --data x.json --palettes` | 打印本曲所有配色的 base/fill/border 推导结果 |
+| `gen_sheet.py --data x.json --palettes` | 打印本曲配色的 base / fill / border / text 推导结果与对比度 |
 | `gen_sheet.py --data x.json --labels` | 显示段落标签（Aメロ / サビ …），默认不显示 |
 | `gen_sheet.py --data x.json --no-title` | 不输出页首标题区（**仅用于续页/局部片段**） |
 | `gen_sheet.py --data x.json --scheme hepburn` | 切换罗马音方案 |
@@ -243,7 +259,10 @@ python scripts/build.py song.html
 - 代表色注册表在 `references/colors.md`，`gen_sheet.py` 会自动加载；数据里写 `"singer": "日野下花帆"` 即可命中
 - 也可在数据里临时用 `palette` 覆盖
 - 色值推导（HSL）：**填充** = 同色相、同饱和、亮度 90%；**边框** = 同色相、亮度 32%（饱和上限 0.85）
-- 未指定 `singer` 时用参考版固定粉（填充 `#f3d7d7` / 边框 `#6e3636`）
+- **字色** = 同色相、亮度 24% 起逐级压暗（饱和上限 0.75），直到对填充色的 **WCAG 对比度 ≥ 7:1**；
+  够不到就退化成纯黑/纯白里对比度更高的那个 —— 即字色不写死黑，跟着底色走，换任何代表色都读得清
+- 未指定 `singer` 时用参考版固定粉（填充 `#f3d7d7` / 边框 `#6e3636`；字色不覆盖，仍是默认黑）
+- 想核对某曲实际推导结果与对比度：`python scripts/gen_sheet.py --data song.json --palettes`
 - 指定层级：块级 `singer` → 行级 `singer` 覆盖块级 → 都没有则默认粉
 - 做新歌时凡核实过的代表色，建议登记回 `references/colors.md`，下次直接复用
 
@@ -268,8 +287,9 @@ jp-lyrics-sheet/
 │   ├── sample_kaminomanimani.json   样例数据（Aメロ + サビ 7 句，可直接跑）
 │   ├── sample_mix_shake.json        角色配色完整示例（全曲 46 句）
 │   ├── sample_hikaru_nara.json      长曲全曲示例（《光るなら》27 句，演示 ref 复用副歌）
+│   ├── sample_sora_no_hako.json     单主题色示例（《空の箱》全曲 39 句，演示 --labels 与字色推导）
 │   └── reference/                   参考成品 PDF / PNG
-├── examples/                    示例成果（《Mix shake!!》成品 PDF / HTML + 第 1 页预览图）
+├── examples/                    示例成果（《Mix shake!!》全曲色彩版 + 《空の箱》单色版，各含 PDF / 预览图）
 └── tests/
     └── test_romaji.py           罗马音规则回归测试
 ```
@@ -278,7 +298,7 @@ jp-lyrics-sheet/
 
 | 脚本 | 用途 |
 | --- | --- |
-| `doctor.py [--smoke]` | 环境 + 规则自检；`--smoke` 追加端到端样例并断言页首标题区 |
+| `doctor.py [--smoke]` | 环境 + 罗马音 + 配色推导自检；`--smoke` 追加端到端样例并断言页首标题区 |
 | `cleanup.py --work-dir . [--apply]` | 清理工作区中间产物，**默认 dry-run**，白名单模式，保守优先 |
 | `desensitize.py [--binaries]` | 打包前扫个人敏感信息（用户名路径 / 密钥 / 邮箱 / 主机名…），只扫描不改文件 |
 | `pack.py --out x.zip [--verify]` | 平铺打 zip；`--verify` 解压到临时目录跑三项自检 |
