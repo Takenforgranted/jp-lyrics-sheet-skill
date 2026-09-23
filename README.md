@@ -51,6 +51,22 @@
 
 配色版（多角色分色）示例见 `assets/sample_mix_shake.json`（《Mix shake!!》全曲 46 句）。
 
+## 示例成果（examples/）
+
+`examples/` 里放了一份**完整的真实成品**——《Mix shake!!》全曲 46 句、角色配色版，可直接打开看效果：
+
+| 文件 | 说明 |
+| --- | --- |
+| [`Mix_Shake!!_歌词分解表.pdf`](examples/Mix_Shake!!_歌词分解表.pdf) | 成品 PDF：A4 竖版 **6 页**，可直接打印 |
+| [`Mix_Shake!!_歌词分解表.html`](examples/Mix_Shake!!_歌词分解表.html) | 同一份成品的 HTML（样式自包含，双击即可看） |
+| [`mix_shake_p1.png`](examples/mix_shake_p1.png) | 第 1 页预览图 |
+
+![《Mix shake!!》第 1 页预览](examples/mix_shake_p1.png)
+
+第 1 页就能看到完整结构：**居中曲名** → **小字居中信息栏**（歌 / 作詞 / 作曲・編曲 / 収録 / Center）
+→ 角色配色图例 → 逐句六行表格（罗马音 / 假名 / 写法 / 语法 / 词义 / 整句翻译），
+不同角色用各自代表色区分（日野下花帆 黄 / 乙宗梢 绿 / 合唱 红）。
+
 ## 快速开始
 
 ### 环境要求
@@ -214,6 +230,7 @@ jp-lyrics-sheet/
 │   ├── sample_kaminomanimani.json   样例数据（Aメロ + サビ 7 句，可直接跑）
 │   ├── sample_mix_shake.json        角色配色完整示例（全曲 46 句）
 │   └── reference/                   参考成品 PDF / PNG
+├── examples/                    示例成果（《Mix shake!!》成品 PDF / HTML + 第 1 页预览图）
 └── tests/
     └── test_romaji.py           罗马音规则回归测试
 ```

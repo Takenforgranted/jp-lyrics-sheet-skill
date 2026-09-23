@@ -1,0 +1,351 @@
+{
+  "title": "光るなら",
+  "meta": {
+    "歌": "Goose house",
+    "作詞": "Goose house",
+    "作曲": "Goose house",
+    "編曲": "Goose house",
+    "収録": "シングル《光るなら》（2014.11.19）",
+    "タイアップ": "アニメ《四月は君の嘘》オープニングテーマ"
+  },
+  "scheme": "spec",
+  "blocks": [
+    {
+      "id": "Aメロ",
+      "lines": [
+        {
+          "words": [
+            { "kana": "あめあがり", "kanji": "雨上がり", "grammar": "名詞", "gloss": "雨后" },
+            { "kana": "の", "kanji": "の", "grammar": "助詞", "gloss": "的" },
+            { "kana": "にじ", "kanji": "虹", "grammar": "名詞", "gloss": "彩虹" },
+            { "kana": "も", "kanji": "も", "grammar": "助詞", "gloss": "也" },
+            { "kana": "りんと", "kanji": "凛と", "grammar": "副詞", "gloss": "凛然" },
+            { "kana": "さいた", "kanji": "咲いた", "grammar": "動詞（た形）", "gloss": "绽放" },
+            { "kana": "はな", "kanji": "花", "grammar": "名詞", "gloss": "花" },
+            { "kana": "も", "kanji": "も", "grammar": "助詞", "gloss": "也" },
+            { "kana": "いろづき", "kanji": "色づき", "grammar": "動詞（ます形去ます）", "gloss": "染上色" },
+            { "kana": "あふれだす", "kanji": "溢れ出す", "grammar": "動詞（原形）", "gloss": "满溢而出" }
+          ],
+          "trans": "雨后的彩虹，还有凛然绽放的花朵，都染上色彩满溢而出"
+        },
+        {
+          "words": [
+            { "kana": "あかねいろ", "kanji": "茜色", "grammar": "名詞", "gloss": "茜红色" },
+            { "kana": "の", "kanji": "の", "grammar": "助詞", "gloss": "的" },
+            { "kana": "そら", "kanji": "空", "grammar": "名詞", "gloss": "天空" },
+            { "kana": "あおぐ", "kanji": "仰ぐ", "grammar": "動詞（原形）", "gloss": "仰望" },
+            { "kana": "きみ", "kanji": "君", "grammar": "名詞", "gloss": "你" },
+            { "kana": "に", "kanji": "に", "grammar": "助詞", "gloss": "（对象）" },
+            { "kana": "あの", "kanji": "あの", "grammar": "指示詞", "gloss": "那" },
+            { "kana": "ひ", "kanji": "日", "grammar": "名詞", "gloss": "日子" },
+            { "kana": "こい", "kanji": "恋", "grammar": "名詞", "gloss": "爱恋" },
+            { "kana": "に", "kanji": "に", "grammar": "助詞", "gloss": "陷入" },
+            { "kana": "おちた", "kanji": "落ちた", "grammar": "動詞（た形）", "gloss": "坠入" }
+          ],
+          "trans": "向着仰望茜色天空的你，那一天我坠入了爱河"
+        },
+        {
+          "words": [
+            { "kana": "しゅんかん", "kanji": "瞬間", "grammar": "名詞", "gloss": "瞬间" },
+            { "kana": "の", "kanji": "の", "grammar": "助詞", "gloss": "的" },
+            { "kana": "ドラマチック", "kanji": "ドラマチック", "grammar": "名詞", "gloss": "戏剧性" }
+          ],
+          "trans": "瞬间的戏剧性"
+        },
+        {
+          "words": [
+            { "kana": "フィルム", "kanji": "フィルム", "grammar": "名詞", "gloss": "胶片" },
+            { "kana": "の", "kanji": "の", "grammar": "助詞", "gloss": "的" },
+            { "kana": "なか", "kanji": "中", "grammar": "名詞", "gloss": "其中" },
+            { "kana": "の", "kanji": "の", "grammar": "助詞", "gloss": "的" },
+            { "kana": "ひとこま", "kanji": "1コマ", "grammar": "名詞", "gloss": "一格" },
+            { "kana": "も", "kanji": "も", "grammar": "助詞", "gloss": "也" },
+            { "kana": "きえない", "kanji": "消えない", "grammar": "動詞（ない形）", "gloss": "不消失" },
+            { "kana": "よ", "kanji": "よ", "grammar": "助詞", "gloss": "（语气）" },
+            { "kana": "こころ", "kanji": "心", "grammar": "名詞", "gloss": "心" },
+            { "kana": "に", "kanji": "に", "grammar": "助詞", "gloss": "在" },
+            { "kana": "きざむ", "kanji": "刻む", "grammar": "動詞（原形）", "gloss": "铭刻" },
+            { "kana": "から", "kanji": "から", "grammar": "接続助詞", "gloss": "因为" }
+          ],
+          "trans": "胶片里的每一格都不会消失哦，因为已铭刻在我心中"
+        }
+      ]
+    },
+    {
+      "id": "サビ",
+      "lines": [
+        {
+          "words": [
+            { "kana": "きみ", "kanji": "君", "grammar": "名詞", "gloss": "你" },
+            { "kana": "だ", "kanji": "だ", "grammar": "助動詞", "gloss": "是" },
+            { "kana": "よ", "kanji": "よ", "grammar": "助詞", "gloss": "（语气）" },
+            { "kana": "きみ", "kanji": "君", "grammar": "名詞", "gloss": "你" },
+            { "kana": "なんだ", "kanji": "なんだ", "grammar": "文法「のだ」", "gloss": "正是" },
+            { "kana": "よ", "kanji": "よ", "grammar": "助詞", "gloss": "（语气）" },
+            { "kana": "おしえて", "kanji": "教えて", "grammar": "動詞（て形）", "gloss": "教会" },
+            { "kana": "くれた", "kanji": "くれた", "grammar": "補助動詞", "gloss": "给了我" }
+          ],
+          "trans": "就是你，正是你啊，教会了我"
+        },
+        {
+          "words": [
+            { "kana": "くらやみ", "kanji": "暗闇", "grammar": "名詞", "gloss": "黑暗" },
+            { "kana": "も", "kanji": "も", "grammar": "助詞", "gloss": "连…也" },
+            { "kana": "ひかる", "kanji": "光る", "grammar": "動詞（原形）", "gloss": "发光" },
+            { "kana": "なら", "kanji": "なら", "grammar": "動詞（仮定形）", "gloss": "如果" },
+            { "kana": "ほしぞら", "kanji": "星空", "grammar": "名詞", "gloss": "星空" },
+            { "kana": "に", "kanji": "に", "grammar": "助詞", "gloss": "变成" },
+            { "kana": "なる", "kanji": "なる", "grammar": "動詞（原形）", "gloss": "成为" }
+          ],
+          "trans": "连黑暗若能发光，也会化作星空"
+        },
+        {
+          "words": [
+            { "kana": "かなしみ", "kanji": "悲しみ", "grammar": "名詞", "gloss": "悲伤" },
+            { "kana": "を", "kanji": "を", "grammar": "助詞", "gloss": "把" },
+            { "kana": "えがお", "kanji": "笑顔", "grammar": "名詞", "gloss": "笑容" },
+            { "kana": "に", "kanji": "に", "grammar": "助詞", "gloss": "变成" },
+            { "kana": "もう", "kanji": "もう", "grammar": "副詞", "gloss": "再" },
+            { "kana": "かくさない", "kanji": "隠さない", "grammar": "動詞（ない形）", "gloss": "不隐藏" },
+            { "kana": "で", "kanji": "で", "grammar": "接続助詞", "gloss": "请勿" }
+          ],
+          "trans": "把悲伤化作笑容，请别再隐藏了"
+        },
+        {
+          "words": [
+            { "kana": "きらめく", "kanji": "煌めく", "grammar": "動詞（原形）", "gloss": "闪耀" },
+            { "kana": "どんな", "kanji": "どんな", "grammar": "指示詞", "gloss": "无论怎样" },
+            { "kana": "ほし", "kanji": "星", "grammar": "名詞", "gloss": "星星" },
+            { "kana": "も", "kanji": "も", "grammar": "助詞", "gloss": "都" },
+            { "kana": "きみ", "kanji": "君", "grammar": "名詞", "gloss": "你" },
+            { "kana": "を", "kanji": "を", "grammar": "助詞", "gloss": "把" },
+            { "kana": "てらす", "kanji": "照らす", "grammar": "動詞（原形）", "gloss": "照耀" },
+            { "kana": "から", "kanji": "から", "grammar": "接続助詞", "gloss": "因为" }
+          ],
+          "trans": "因为每一颗闪耀的星都会将你照亮"
+        }
+      ]
+    },
+    {
+      "id": "Aメロ2",
+      "lines": [
+        {
+          "words": [
+            { "kana": "ねむり", "kanji": "眠り", "grammar": "名詞", "gloss": "睡眠" },
+            { "kana": "も", "kanji": "も", "grammar": "助詞", "gloss": "连…也" },
+            { "kana": "わすれて", "kanji": "忘れて", "grammar": "動詞（て形）", "gloss": "忘记" },
+            { "kana": "むかえた", "kanji": "迎えた", "grammar": "動詞（た形）", "gloss": "迎来" },
+            { "kana": "あさひ", "kanji": "朝日", "grammar": "名詞", "gloss": "朝阳" },
+            { "kana": "が", "kanji": "が", "grammar": "助詞", "gloss": "（主语）" },
+            { "kana": "やたらと", "kanji": "やたらと", "grammar": "副詞", "gloss": "格外" },
+            { "kana": "つきささる", "kanji": "突き刺さる", "grammar": "動詞（原形）", "gloss": "刺入" }
+          ],
+          "trans": "连睡眠也忘却而迎来的朝阳，格外刺痛眼睛"
+        },
+        {
+          "words": [
+            { "kana": "ていきあつ", "kanji": "低気圧", "grammar": "名詞", "gloss": "低气压" },
+            { "kana": "はこぶ", "kanji": "運ぶ", "grammar": "動詞（原形）", "gloss": "带来" },
+            { "kana": "ずつう", "kanji": "頭痛", "grammar": "名詞", "gloss": "头痛" },
+            { "kana": "だって", "kanji": "だって", "grammar": "助詞", "gloss": "就连" },
+            { "kana": "わすれる", "kanji": "忘れる", "grammar": "動詞（原形）", "gloss": "忘记" },
+            { "kana": "きみ", "kanji": "君", "grammar": "名詞", "gloss": "你" },
+            { "kana": "に", "kanji": "に", "grammar": "助詞", "gloss": "（对象）" },
+            { "kana": "あえば", "kanji": "会えば", "grammar": "動詞（ば形）", "gloss": "只要见到" }
+          ],
+          "trans": "低气压带来的头痛，只要见到你也会忘却"
+        },
+        {
+          "words": [
+            { "kana": "せいじゃく", "kanji": "静寂", "grammar": "名詞", "gloss": "寂静" },
+            { "kana": "は", "kanji": "は", "grammar": "助詞", "gloss": "（主题）" },
+            { "kana": "ロマンティック", "kanji": "ロマンティック", "grammar": "名詞", "gloss": "浪漫" }
+          ],
+          "trans": "寂静即是浪漫"
+        },
+        {
+          "words": [
+            { "kana": "こうちゃ", "kanji": "紅茶", "grammar": "名詞", "gloss": "红茶" },
+            { "kana": "に", "kanji": "に", "grammar": "助詞", "gloss": "在" },
+            { "kana": "とけた", "kanji": "溶けた", "grammar": "動詞（た形）", "gloss": "融化" },
+            { "kana": "シュガー", "kanji": "シュガー", "grammar": "名詞", "gloss": "砂糖" },
+            { "kana": "の", "kanji": "の", "grammar": "助詞", "gloss": "的" },
+            { "kana": "ように", "kanji": "ように", "grammar": "文法「ように」", "gloss": "像…一样" },
+            { "kana": "ぜんしん", "kanji": "全身", "grammar": "名詞", "gloss": "全身" },
+            { "kana": "に", "kanji": "に", "grammar": "助詞", "gloss": "在" },
+            { "kana": "めぐる", "kanji": "巡る", "grammar": "動詞（原形）", "gloss": "流转" },
+            { "kana": "よ", "kanji": "よ", "grammar": "助詞", "gloss": "（语气）" },
+            { "kana": "きみ", "kanji": "君", "grammar": "名詞", "gloss": "你" },
+            { "kana": "の", "kanji": "の", "grammar": "助詞", "gloss": "的" },
+            { "kana": "こえ", "kanji": "声", "grammar": "名詞", "gloss": "声音" }
+          ],
+          "trans": "如同融在红茶里的砂糖，你的声音流遍我全身"
+        }
+      ]
+    },
+    {
+      "id": "サビ2",
+      "lines": [
+        {
+          "words": [
+            { "kana": "きみ", "kanji": "君", "grammar": "名詞", "gloss": "你" },
+            { "kana": "だ", "kanji": "だ", "grammar": "助動詞", "gloss": "是" },
+            { "kana": "よ", "kanji": "よ", "grammar": "助詞", "gloss": "（语气）" },
+            { "kana": "きみ", "kanji": "君", "grammar": "名詞", "gloss": "你" },
+            { "kana": "なんだ", "kanji": "なんだ", "grammar": "文法「のだ」", "gloss": "正是" },
+            { "kana": "よ", "kanji": "よ", "grammar": "助詞", "gloss": "（语气）" },
+            { "kana": "えがお", "kanji": "笑顔", "grammar": "名詞", "gloss": "笑容" },
+            { "kana": "を", "kanji": "を", "grammar": "助詞", "gloss": "把" },
+            { "kana": "くれた", "kanji": "くれた", "grammar": "動詞（た形）", "gloss": "给了我" }
+          ],
+          "trans": "就是你，正是你啊，给了我笑容"
+        },
+        {
+          "words": [
+            { "kana": "なみだ", "kanji": "涙", "grammar": "名詞", "gloss": "泪水" },
+            { "kana": "も", "kanji": "も", "grammar": "助詞", "gloss": "连…也" },
+            { "kana": "ひかる", "kanji": "光る", "grammar": "動詞（原形）", "gloss": "发光" },
+            { "kana": "なら", "kanji": "なら", "grammar": "動詞（仮定形）", "gloss": "如果" },
+            { "kana": "りゅうせい", "kanji": "流星", "grammar": "名詞", "gloss": "流星" },
+            { "kana": "に", "kanji": "に", "grammar": "助詞", "gloss": "变成" },
+            { "kana": "なる", "kanji": "なる", "grammar": "動詞（原形）", "gloss": "成为" }
+          ],
+          "trans": "连泪水若能发光，也会化作流星"
+        },
+        {
+          "words": [
+            { "kana": "きずついた", "kanji": "傷付いた", "grammar": "動詞（た形）", "gloss": "受了伤" },
+            { "kana": "その", "kanji": "その", "grammar": "指示詞", "gloss": "那" },
+            { "kana": "て", "kanji": "手", "grammar": "名詞", "gloss": "手" },
+            { "kana": "を", "kanji": "を", "grammar": "助詞", "gloss": "把" },
+            { "kana": "もう", "kanji": "もう", "grammar": "副詞", "gloss": "再" },
+            { "kana": "はなさない", "kanji": "離さない", "grammar": "動詞（ない形）", "gloss": "不放开" },
+            { "kana": "で", "kanji": "で", "grammar": "接続助詞", "gloss": "请勿" }
+          ],
+          "trans": "请别再放开那双受伤的手"
+        },
+        {
+          "words": [
+            { "kana": "ねがい", "kanji": "願い", "grammar": "名詞", "gloss": "心愿" },
+            { "kana": "を", "kanji": "を", "grammar": "助詞", "gloss": "把" },
+            { "kana": "こめた", "kanji": "込めた", "grammar": "動詞（た形）", "gloss": "倾注" },
+            { "kana": "そら", "kanji": "空", "grammar": "名詞", "gloss": "天空" },
+            { "kana": "に", "kanji": "に", "grammar": "助詞", "gloss": "在" },
+            { "kana": "あした", "kanji": "明日", "grammar": "名詞", "gloss": "明天" },
+            { "kana": "が", "kanji": "が", "grammar": "助詞", "gloss": "（主语）" },
+            { "kana": "くる", "kanji": "来る", "grammar": "動詞（原形）", "gloss": "到来" },
+            { "kana": "から", "kanji": "から", "grammar": "接続助詞", "gloss": "因为" }
+          ],
+          "trans": "因为明天会来到这片寄托了心愿的天空"
+        }
+      ]
+    },
+    {
+      "id": "Bridge",
+      "lines": [
+        {
+          "words": [
+            { "kana": "みちびいて", "kanji": "導いて", "grammar": "動詞（て形）", "gloss": "指引" },
+            { "kana": "くれた", "kanji": "くれた", "grammar": "補助動詞", "gloss": "给了我" },
+            { "kana": "ひかり", "kanji": "光", "grammar": "名詞", "gloss": "光芒" },
+            { "kana": "は", "kanji": "は", "grammar": "助詞", "gloss": "（主题）" },
+            { "kana": "きみ", "kanji": "君", "grammar": "名詞", "gloss": "你" },
+            { "kana": "だ", "kanji": "だ", "grammar": "助動詞", "gloss": "是" },
+            { "kana": "よ", "kanji": "よ", "grammar": "助詞", "gloss": "（语气）" },
+            { "kana": "つられて", "kanji": "つられて", "grammar": "受身動詞", "gloss": "被带动" },
+            { "kana": "ぼく", "kanji": "僕", "grammar": "名詞", "gloss": "我" },
+            { "kana": "も", "kanji": "も", "grammar": "助詞", "gloss": "也" },
+            { "kana": "はしりだした", "kanji": "走り出した", "grammar": "動詞（た形）", "gloss": "奔跑起来" }
+          ],
+          "trans": "指引我的那道光就是你，我也被带动着奔跑起来"
+        },
+        {
+          "words": [
+            { "kana": "しらぬま", "kanji": "知らぬ間", "grammar": "名詞", "gloss": "不知不觉" },
+            { "kana": "に", "kanji": "に", "grammar": "助詞", "gloss": "在" },
+            { "kana": "クロス", "kanji": "クロス", "grammar": "名詞", "gloss": "交错" },
+            { "kana": "し", "kanji": "し", "grammar": "サ変動詞", "gloss": "做" },
+            { "kana": "はじめた", "kanji": "始めた", "grammar": "補助動詞", "gloss": "开始" },
+            { "kana": "ほら", "kanji": "ほら", "grammar": "感動詞", "gloss": "你看" },
+            { "kana": "いま", "kanji": "今", "grammar": "名詞", "gloss": "现在" },
+            { "kana": "だ", "kanji": "だ", "grammar": "助動詞", "gloss": "正是" },
+            { "kana": "ここ", "kanji": "ここ", "grammar": "指示詞", "gloss": "这里" },
+            { "kana": "で", "kanji": "で", "grammar": "助詞", "gloss": "在" },
+            { "kana": "ひかる", "kanji": "光る", "grammar": "動詞（原形）", "gloss": "发光" },
+            { "kana": "なら", "kanji": "なら", "grammar": "動詞（仮定形）", "gloss": "如果" }
+          ],
+          "trans": "不知不觉间我们开始交错，看，就是现在，若在此处闪耀"
+        },
+        {
+          "words": [
+            { "kana": "きみ", "kanji": "君", "grammar": "名詞", "gloss": "你" },
+            { "kana": "だ", "kanji": "だ", "grammar": "助動詞", "gloss": "是" },
+            { "kana": "よ", "kanji": "よ", "grammar": "助詞", "gloss": "（语气）" },
+            { "kana": "きみ", "kanji": "君", "grammar": "名詞", "gloss": "你" },
+            { "kana": "なんだ", "kanji": "なんだ", "grammar": "文法「のだ」", "gloss": "正是" },
+            { "kana": "よ", "kanji": "よ", "grammar": "助詞", "gloss": "（语气）" },
+            { "kana": "おしえて", "kanji": "教えて", "grammar": "動詞（て形）", "gloss": "教会" },
+            { "kana": "くれた", "kanji": "くれた", "grammar": "補助動詞", "gloss": "给了我" },
+            { "kana": "くらやみ", "kanji": "暗闇", "grammar": "名詞", "gloss": "黑暗" },
+            { "kana": "は", "kanji": "は", "grammar": "助詞", "gloss": "（主题）" },
+            { "kana": "おわる", "kanji": "終わる", "grammar": "動詞（原形）", "gloss": "结束" },
+            { "kana": "から", "kanji": "から", "grammar": "接続助詞", "gloss": "因为" }
+          ],
+          "trans": "就是你，正是你啊，教会我黑暗终将会结束"
+        }
+      ]
+    },
+    { "ref": "サビ" },
+    {
+      "id": "ラスト",
+      "lines": [
+        {
+          "words": [
+            { "kana": "こたえ", "kanji": "答え", "grammar": "名詞", "gloss": "答案" },
+            { "kana": "は", "kanji": "は", "grammar": "助詞", "gloss": "（主题）" },
+            { "kana": "いつでも", "kanji": "いつでも", "grammar": "不定称詞", "gloss": "始终" },
+            { "kana": "ぐうぜん", "kanji": "偶然", "grammar": "名詞", "gloss": "偶然" },
+            { "kana": "ひつぜん", "kanji": "必然", "grammar": "名詞", "gloss": "必然" }
+          ],
+          "trans": "答案究竟是偶然，还是必然？"
+        },
+        {
+          "words": [
+            { "kana": "いつか", "kanji": "いつか", "grammar": "不定称詞", "gloss": "某天" },
+            { "kana": "えらんだ", "kanji": "選んだ", "grammar": "動詞（た形）", "gloss": "选择" },
+            { "kana": "みち", "kanji": "道", "grammar": "名詞", "gloss": "道路" },
+            { "kana": "こそ", "kanji": "こそ", "grammar": "助詞", "gloss": "正是" },
+            { "kana": "うんめい", "kanji": "運命", "grammar": "名詞", "gloss": "命运" },
+            { "kana": "に", "kanji": "に", "grammar": "助詞", "gloss": "变成" },
+            { "kana": "なる", "kanji": "なる", "grammar": "動詞（原形）", "gloss": "成为" }
+          ],
+          "trans": "唯有曾经选择的那条路，才会化作命运"
+        },
+        {
+          "words": [
+            { "kana": "にぎりしめた", "kanji": "握りしめた", "grammar": "動詞（た形）", "gloss": "紧握" },
+            { "kana": "その", "kanji": "その", "grammar": "指示詞", "gloss": "那" },
+            { "kana": "きぼう", "kanji": "希望", "grammar": "名詞", "gloss": "希望" },
+            { "kana": "も", "kanji": "も", "grammar": "助詞", "gloss": "与" },
+            { "kana": "ふあん", "kanji": "不安", "grammar": "名詞", "gloss": "不安" },
+            { "kana": "も", "kanji": "も", "grammar": "助詞", "gloss": "与" }
+          ],
+          "trans": "紧握在手心的那份希望与不安"
+        },
+        {
+          "words": [
+            { "kana": "きっと", "kanji": "きっと", "grammar": "副詞", "gloss": "一定" },
+            { "kana": "ふたり", "kanji": "2人", "grammar": "名詞", "gloss": "两人" },
+            { "kana": "を", "kanji": "を", "grammar": "助詞", "gloss": "把" },
+            { "kana": "うごかす", "kanji": "動かす", "grammar": "動詞（原形）", "gloss": "推动" },
+            { "kana": "ひかり", "kanji": "光", "grammar": "名詞", "gloss": "光芒" },
+            { "kana": "に", "kanji": "に", "grammar": "助詞", "gloss": "变成" },
+            { "kana": "なる", "kanji": "なる", "grammar": "動詞（原形）", "gloss": "成为" },
+            { "kana": "から", "kanji": "から", "grammar": "接続助詞", "gloss": "因为" }
+          ],
+          "trans": "一定会化作推动我们两人的光芒"
+        }
+      ]
+    }
+  ]
+}

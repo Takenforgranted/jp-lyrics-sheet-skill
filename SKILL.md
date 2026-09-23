@@ -36,7 +36,9 @@ jp-lyrics-sheet/
 ├── assets/
 │   ├── sample_kaminomanimani.json    样例数据（Aメロ+サビ 7 句，可直接跑）
 │   ├── sample_mix_shake.json         角色配色完整示例（スリーズブーケ《Mix shake!!》全曲 46 句）
+│   ├── sample_hikaru_nara.json       长曲全曲示例（《光るなら》27 句，演示 `ref` 复用副歌）
 │   └── reference/sample_*.pdf|png    参考成品（含页首标题区）
+├── examples/                         ★ 示例成果：《Mix shake!!》成品 PDF/HTML + 第 1 页预览图
 └── tests/
     └── test_romaji.py                罗马音规则回归测试
 ```
@@ -172,6 +174,9 @@ build.py song.html                                        # 产 song.pdf + 前 3
 用 `build.py` 渲出的 PNG **目检**——**先看第一页有没有居中曲名 + 小字信息栏**，
 再看字体、断行、配色、翻译行。确认无误后 `present_files`：**PDF 在前，HTML 随后**。
 
+想要个「好看长什么样」的参照，直接看 `examples/Mix_Shake!!_歌词分解表.pdf`
+（全曲 46 句、角色配色版、6 页，`examples/mix_shake_p1.png` 是第 1 页预览图）。
+
 ### 7. 收尾清理（必做，交付完立刻跑）
 
 生成过程会在工作区堆一堆中间产物——抓下来的网页 dump、解析中间文件、一次性脚本、
@@ -228,6 +233,15 @@ cleanup.py --work-dir . --apply --temp --skill             # 连 %TEMP% 残留�
   调 python 时加 `-X utf8`。
 - 文件名避免 `∞` 等特殊字符。
 - `--check` 的术语校验只提示不阻断；表外术语先补进 `references/grammar_terms.md` 再用。
+- **Windows 上 shell 工具可能半残**：`Bash` 工具里 `ls`/`head`/`dirname` 等外部命令会报
+  `command not found`（PortableGit 缺 coreutils），`PowerShell` 工具有时调用成功却不回传 stdout。
+  → 文件/目录操作（列目录、复制、删成品副本、批量渲图）一律改用本机 venv python 的 `-c` 内联
+  脚本，稳定可靠；也**不要**从 Bash 去调 PowerShell，会被安全策略直接拦掉。
+- 成品文件名可以用日文/中文（`光るなら_逐词分解表.pdf` 实测通过 Chrome 打印），
+  但**工作目录里的中间产物一律用 ASCII 名**（`hikaru_nara.json`），少一类编码坑。
+- 「同曲不同源歌词有分歧」是常态：`悲しみを笑顔に` vs `も`、`消えないよ` vs `よう`、
+  `忘れる` vs `薄れる` 都真实存在。**以 kashinavi + marumaru（后者注明了取自 uta-net）
+  两源一致为准**，不要拿英文罗马音转写站反推日文原文。
 
 ## 脱敏约定（改本 skill / 打包前必须遵守）
 
