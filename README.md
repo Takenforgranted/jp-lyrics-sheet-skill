@@ -281,4 +281,4 @@ python scripts/pack.py --out jp-lyrics-sheet.zip --verify
 
 ## 许可
 
-仓库暂未声明开源许可证。如需在项目中复用，请先联系作者确认；同时请一并尊重 YJY 对原始作品的权利。
+欢迎部署使用并做出改进优化，也希望大家能一并尊重 YJY 对原始作品的权利。
