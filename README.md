@@ -1,6 +1,8 @@
 # jp-lyrics-sheet-skill
 
 > 把一首日文歌，做成一页逐词分解表：**罗马音 / 假名 / 写法 / 语法 / 词义 / 整句翻译** 六行并排，一眼看全。
+>
+> **这是一个 Agent Skill**：装上之后交给 Agent 调用即可，一句话出 PDF，不需要自己敲命令。
 
 ![示例：神のまにまに](assets/reference/sample_kaminomanimani.png)
 
@@ -12,8 +14,11 @@
 
 ## 这是什么
 
-一个把**日文歌词**加工成**逐词标注表**的小工具链：输入一份 JSON 歌词数据，输出**可直接打印的 A4 表格**（HTML + PDF）。适合做歌词笔记、语法拆解、翻译对照、语言学习资料。
+一个把**日文歌词**加工成**逐词标注表**的 **Agent Skill**：输入一份 JSON 歌词数据，输出**可直接打印的 A4 表格**（HTML + PDF）。适合做歌词笔记、语法拆解、翻译对照、语言学习资料。
 
+**主要使用方式是交给 Agent 调用** —— 你把歌名、歌词链接或歌词文本丢过去就行，取词、分词、写数据、渲染、目检、交付全由 Agent 完成，你不需要手敲任何命令。（`scripts/` 里的命令也能手工执行，用来复现或调试，见「手动调用」一节。）
+
+- Agent 原生：`SKILL.md` 就是给 Agent 看的操作手册，字段约束、罗马音规则、踩坑、收尾清理都写在里面
 - 纯本地运行，不依赖任何在线模板或第三方渲染服务
 - 数据驱动：歌词数据、配色、术语分开维护，换一首歌只改数据
 - 样式完全固化在 `scripts/gen_sheet.py` 的 CSS 常量里，改一处全局生效
@@ -22,6 +27,7 @@
 
 | 能力 | 说明 |
 | --- | --- |
+| **Agent 直接接手** | 装好后用自然语言下需求即可；工作流、字段约束、校验与收尾清理全部沉淀在 `SKILL.md` |
 | **六行逐词表格** | 每句一组表格，逐词一列：罗马音 → 假名 → 写法 → 语法 → 词义 → 整句翻译 |
 | **页首标题区** | 成品开头固定为**居中曲名** + 其下**小字居中的信息栏**（作詞 / 作曲 / 編曲 / 歌 / Center / 収録） |
 | **罗马音引擎** | 内置假名→罗马音转换，处理促音、长音、拗音、助词 `は/へ/を`；支持 `spec` 与 `hepburn` 双方案 |
@@ -96,27 +102,44 @@ pip install pypdfium2 Pillow
 pip install playwright && playwright install chromium
 ```
 
-### 安装
+### 安装（装成 skill，给 Agent 用）
 
 ```bash
-# 方式一：直接克隆本仓库
-git clone https://github.com/Takenforgranted/jp-lyrics-sheet-skill.git
+# 放进 Agent 的 skill 目录，它就会自动发现并按 SKILL.md 调用
+git clone https://github.com/Takenforgranted/jp-lyrics-sheet-skill.git \
+  ~/.workbuddy/skills/jp-lyrics-sheet
 
-# 方式二：把仓库目录整个放进你的 skill 目录（也可以放在任意位置直接调用脚本）
-#   ~/.workbuddy/skills/jp-lyrics-sheet/
+# 也可以放在任意位置，只要把路径告诉 Agent 即可
 ```
 
-### 自检（新机器第一次必跑）
+## 用法（主要：交给 Agent 调用）
+
+装好后**不需要自己敲命令**，直接用自然语言提需求：
+
+> 「把《光るなら》做成歌词分解表」
+> 「这首歌做一版带角色配色的逐词表，输出 PDF」
+> 「给这份歌词做逐词语法标注 / 翻译对照表」
+
+Agent 读到 `SKILL.md` 后的执行链路：
+
+1. **环境自检** —— `doctor.py --smoke`（新机器第一次必跑，PASS 才开工）
+2. **取词** —— 多源交叉核对日文原文
+3. **分词写数据** —— 按语素切栏，逐词补假名 / 写法 / 语法 / 词义 / 整句翻译
+4. **渲染** —— `gen_sheet.py` 出 HTML（配色版加 `--legend`）
+5. **导出与目检** —— `build.py` 出 PDF + 预览 PNG，确认字体、断行、配色、页首标题区无误
+6. **交付** —— 先 PDF 后 HTML
+7. **收尾清理** —— 清掉中间产物与 Chrome 临时 profile
+
+`SKILL.md` 是这套流程的权威手册（含字段约束、罗马音规则、角色配色、脱敏约定、全部踩坑），Agent 会照着执行。
+
+## 手动调用（复现 / 调试用）
+
+以下是 Agent 内部实际执行的等价命令，人也可以直接跑：
 
 ```bash
+# 0. 新机器先自检（检查 Python / 依赖 / 浏览器 / 字体 / 罗马音规则 / 页首标题区 + 端到端样例）
 python scripts/doctor.py --smoke
-```
 
-结论 `PASS` 即环境就绪——会依次检查 Python、依赖模块、浏览器、字体、罗马音规则、页首标题区，最后跑一遍端到端样例（HTML + PDF）。
-
-## 使用方法
-
-```bash
 # 1. 写数据（见下方「数据格式」），先体检一下
 python scripts/gen_sheet.py --data song.json --check
 
