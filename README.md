@@ -67,10 +67,12 @@ pip install playwright && playwright install chromium
 
 ### 安装
 
-把本目录整个丢进你的 skill 目录即可（也可以放在任意位置直接调用脚本）：
+```bash
+# 方式一：直接克隆本仓库
+git clone https://github.com/Takenforgranted/jp-lyrics-sheet-skill.git
 
-```
-~/.workbuddy/skills/jp-lyrics-sheet/
+# 方式二：把仓库目录整个放进你的 skill 目录（也可以放在任意位置直接调用脚本）
+#   ~/.workbuddy/skills/jp-lyrics-sheet/
 ```
 
 ### 自检（新机器第一次必跑）
