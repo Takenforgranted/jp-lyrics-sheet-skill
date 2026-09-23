@@ -51,6 +51,21 @@
 
 配色版（多角色分色）示例见 `assets/sample_mix_shake.json`（《Mix shake!!》全曲 46 句）。
 
+## 自带样例数据（assets/）
+
+三份可以直接跑的数据，覆盖从最小样例到长曲全曲：
+
+| 文件 | 内容 | 演示重点 |
+| --- | --- | --- |
+| `sample_kaminomanimani.json` | 《神のまにまに》Aメロ + サビ，7 句 | 最小可用样例（`doctor.py --smoke` 就用它做端到端） |
+| `sample_mix_shake.json` | 《Mix shake!!》全曲 46 句 | 角色 / 合唱分色：`singer` + `--legend` |
+| `sample_hikaru_nara.json` | 《光るなら》全曲 27 句 | 长曲结构，用 `{"ref": "サビ"}` 复用重复段落 |
+
+```bash
+python scripts/gen_sheet.py --data assets/sample_mix_shake.json --out demo.html --legend
+python scripts/build.py demo.html
+```
+
 ## 示例成果（examples/）
 
 `examples/` 里放了一份**完整的真实成品**——《Mix shake!!》全曲 46 句、角色配色版，可直接打开看效果：
@@ -229,6 +244,7 @@ jp-lyrics-sheet/
 ├── assets/
 │   ├── sample_kaminomanimani.json   样例数据（Aメロ + サビ 7 句，可直接跑）
 │   ├── sample_mix_shake.json        角色配色完整示例（全曲 46 句）
+│   ├── sample_hikaru_nara.json      长曲全曲示例（《光るなら》27 句，演示 ref 复用副歌）
 │   └── reference/                   参考成品 PDF / PNG
 ├── examples/                    示例成果（《Mix shake!!》成品 PDF / HTML + 第 1 页预览图）
 └── tests/
@@ -260,6 +276,13 @@ python scripts/cleanup.py --apply --temp --skill                          # 连 
 - **找不到浏览器**：`build.py` 按 Chrome → Edge → Playwright chromium 顺序自动探测；`build.py --browser` 可单独查看探测结果。
 - **术语被 `--check` 提示**：`--check` 只提示不阻断；把新术语补进 `references/grammar_terms.md` 即可。
 - **本机 `Compress-Archive` 打 zip 失败（exit 1 且无输出）**：改用 `pack.py`（Python `zipfile`），已在脚本里验证过。
+- **Windows 上 shell 工具可能半残**：Bash 里 `ls` / `head` / `dirname` 等外部命令会 `command not found`
+  （PortableGit 缺 coreutils），PowerShell 有时调用成功却不回传 stdout。
+  → 批量文件操作建议直接用 Python 内联脚本，稳定可靠。
+- **文件名编码**：成品名可以用日文/中文（`光るなら_逐词分解表.pdf` 实测可打印），
+  但**工作目录里的中间产物一律用 ASCII 名**（`hikaru_nara.json`），少一类编码坑。
+- **同一首歌不同歌词站有出入是常态**：`悲しみを笑顔に` vs `も`、`消えないよ` vs `よう` 之类的分歧真实存在。
+  以 **kashinavi + marumaru（注明取自 uta-net）两源一致**为准，不要拿英文罗马音转写站反推日文原文。
 
 ## 脱敏约定
 
