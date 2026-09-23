@@ -1,0 +1,12 @@
+# Python
+__pycache__/
+*.py[cod]
+.venv/
+venv/
+
+# 自检 / 渲染中间产物
+_smoke/
+preview_p*.png
+*.bak
+*.tmp
+*.log

@@ -1,0 +1,537 @@
+{
+  "title": "Mix shake!!",
+  "meta": {
+    "歌": "スリーズブーケ（日野下花帆・乙宗梢）",
+    "作詞": "ケリー",
+    "作曲・編曲": "川崎智哉",
+    "収録": "1st シングル《Reflection in the mirror》",
+    "Center": "乙宗梢"
+  },
+  "scheme": "spec",
+  "palette": {
+    "花帆": { "color": "#f8b500", "label": "日野下花帆" },
+    "梢": { "color": "#68be8d", "label": "乙宗梢" },
+    "合唱": { "color": "#da645f", "label": "スリーズブーケ（合唱）" }
+  },
+  "blocks": [
+    {
+      "id": "イントロ",
+      "singer": "合唱",
+      "lines": [
+        {
+          "words": [
+            { "kana": "ヘイ シェイク イット アップ シェイク", "kanji": "Hey, shake it up!! Sh-sh-sh-shake!!", "grammar": "英文", "gloss": "来摇起来" }
+          ],
+          "trans": "嘿，摇起来！！Sh-sh-sh-摇！！"
+        },
+        {
+          "words": [
+            { "kana": "ヘイ シェイク イット アップ シェイク", "kanji": "Hey, shake it up!! Sh-sh-sh-shake!!", "grammar": "英文", "gloss": "来摇起来" }
+          ],
+          "trans": "嘿，摇起来！！Sh-sh-sh-摇！！"
+        }
+      ]
+    },
+    {
+      "id": "Aメロ",
+      "lines": [
+        {
+          "singer": "梢",
+          "words": [
+            { "kana": "あれ", "kanji": "あれ", "grammar": "指示詞", "gloss": "那个" },
+            { "kana": "と", "kanji": "と", "grammar": "助詞", "gloss": "和" },
+            { "kana": "これ", "kanji": "これ", "grammar": "指示詞", "gloss": "这个" },
+            { "kana": "それ", "kanji": "それ", "grammar": "指示詞", "gloss": "那个" },
+            { "kana": "と", "kanji": "と", "grammar": "助詞", "gloss": "和" },
+            { "kana": "どれ", "kanji": "どれ", "grammar": "疑問詞", "gloss": "哪个" },
+            { "kana": "みんな", "kanji": "皆", "grammar": "名詞", "gloss": "大家" },
+            { "kana": "いそがしい", "kanji": "忙しい", "grammar": "い形容詞", "gloss": "忙碌" }
+          ],
+          "trans": "这个和那个、那个和哪个，大家都好忙"
+        },
+        {
+          "singer": "梢",
+          "words": [
+            { "kana": "まって", "kanji": "待って", "grammar": "動詞（て形）", "gloss": "等等" },
+            { "kana": "どうして", "kanji": "どうして", "grammar": "疑問詞", "gloss": "为什么" },
+            { "kana": "ほんとに", "kanji": "本当に", "grammar": "副詞", "gloss": "真的" },
+            { "kana": "それ", "kanji": "それ", "grammar": "指示詞", "gloss": "那个" },
+            { "kana": "って", "kanji": "って", "grammar": "助詞", "gloss": "（主题）" },
+            { "kana": "だいじな", "kanji": "大事な", "grammar": "な形容詞（連体形）", "gloss": "重要" },
+            { "kana": "こと", "kanji": "こと", "grammar": "形式名詞", "gloss": "事情" }
+          ],
+          "trans": "等等、为什么，那件事真的那么重要吗？"
+        },
+        {
+          "singer": "花帆",
+          "words": [
+            { "kana": "いき", "kanji": "息", "grammar": "名詞", "gloss": "呼吸" },
+            { "kana": "とめて", "kanji": "止めて", "grammar": "動詞（て形）", "gloss": "屏住" },
+            { "kana": "のみ", "kanji": "飲み", "grammar": "動詞（ます形去ます）", "gloss": "喝" },
+            { "kana": "ほして", "kanji": "干して", "grammar": "動詞（て形）", "gloss": "喝干" },
+            { "kana": "にがい", "kanji": "苦い", "grammar": "い形容詞", "gloss": "苦涩" },
+            { "kana": "かお", "kanji": "顔", "grammar": "名詞", "gloss": "表情" },
+            { "kana": "した", "kanji": "した", "grammar": "サ変動詞", "gloss": "露出" }
+          ],
+          "trans": "屏住呼吸、一饮而尽，露出苦涩的表情"
+        },
+        {
+          "singer": "花帆",
+          "words": [
+            { "kana": "そんな", "kanji": "そんな", "grammar": "指示詞", "gloss": "那样" },
+            { "kana": "まいにち", "kanji": "毎日", "grammar": "名詞", "gloss": "每天" },
+            { "kana": "ふけんこう", "kanji": "不健康", "grammar": "名詞", "gloss": "不健康" },
+            { "kana": "すぎる", "kanji": "過ぎる", "grammar": "補助動詞", "gloss": "过于" }
+          ],
+          "trans": "这样的每一天太不健康了"
+        }
+      ]
+    },
+    {
+      "id": "Bメロ",
+      "lines": [
+        {
+          "singer": "梢",
+          "words": [
+            { "kana": "ヘイ シェイク イット アップ シェイク", "kanji": "Hey, shake it up!! Sh-sh-sh-shake!!", "grammar": "英文", "gloss": "来摇起来" }
+          ],
+          "trans": "嘿，摇起来！！Sh-sh-sh-摇！！"
+        },
+        {
+          "singer": "梢",
+          "words": [
+            { "kana": "こころ", "kanji": "心", "grammar": "名詞", "gloss": "心灵" },
+            { "kana": "が", "kanji": "が", "grammar": "助詞", "gloss": "（主语）" },
+            { "kana": "ビタミン", "kanji": "ビタミン", "grammar": "名詞", "gloss": "维他命" },
+            { "kana": "ふそく", "kanji": "不足", "grammar": "名詞", "gloss": "不足" },
+            { "kana": "だ", "kanji": "だ", "grammar": "助動詞", "gloss": "是" },
+            { "kana": "ね", "kanji": "ね", "grammar": "助詞", "gloss": "呢" }
+          ],
+          "trans": "心灵的维他命不足了呢"
+        },
+        {
+          "singer": "花帆",
+          "words": [
+            { "kana": "ヘイ シェイク イット アップ シェイク", "kanji": "Hey, shake it up!! Sh-sh-sh-shake!!", "grammar": "英文", "gloss": "来摇起来" }
+          ],
+          "trans": "嘿，摇起来！！Sh-sh-sh-摇！！"
+        },
+        {
+          "singer": "花帆",
+          "words": [
+            { "kana": "スマイル", "kanji": "スマイル", "grammar": "名詞", "gloss": "笑容" },
+            { "kana": "チャージ", "kanji": "チャージ", "grammar": "サ変動詞", "gloss": "补充" },
+            { "kana": "しなく", "kanji": "しなく", "grammar": "い形容詞", "gloss": "不…就" },
+            { "kana": "ちゃ", "kanji": "ちゃ", "grammar": "助詞", "gloss": "（ては）" },
+            { "kana": "ね", "kanji": "ね", "grammar": "助詞", "gloss": "呢" }
+          ],
+          "trans": "非得好好补充笑容不可呢"
+        },
+        {
+          "singer": "合唱",
+          "words": [
+            { "kana": "いく", "kanji": "行く", "grammar": "動詞（原形）", "gloss": "要去了" },
+            { "kana": "よ", "kanji": "よ", "grammar": "助詞", "gloss": "哦" },
+            { "kana": "シェイク イット アップ シェイク", "kanji": "Shake it up!! Sh-sh-sh-shake!!", "grammar": "英文", "gloss": "摇起来" }
+          ],
+          "trans": "要去了哦　摇起来！！Sh-sh-sh-摇！！"
+        },
+        {
+          "singer": "梢",
+          "words": [
+            { "kana": "ノリノリ", "kanji": "ノリノリ", "grammar": "副詞", "gloss": "兴高采烈" },
+            { "kana": "フリフリ", "kanji": "フリフリ", "grammar": "副詞", "gloss": "摇摇晃晃" },
+            { "kana": "その", "kanji": "その", "grammar": "指示詞", "gloss": "那个" },
+            { "kana": "ちょうし", "kanji": "調子", "grammar": "名詞", "gloss": "劲头" }
+          ],
+          "trans": "兴高采烈摇摇晃晃，就是这股劲"
+        },
+        {
+          "singer": "合唱",
+          "words": [
+            { "kana": "ヘイ シェイク イット アップ シェイク", "kanji": "Hey, shake it up!! Sh-sh-sh-shake!!", "grammar": "英文", "gloss": "来摇起来" }
+          ],
+          "trans": "嘿，摇起来！！Sh-sh-sh-摇！！"
+        },
+        {
+          "singer": "花帆",
+          "words": [
+            { "kana": "みんな", "kanji": "皆", "grammar": "名詞", "gloss": "大家" },
+            { "kana": "で", "kanji": "で", "grammar": "助詞", "gloss": "一起" },
+            { "kana": "たのしく", "kanji": "楽しく", "grammar": "い形容詞", "gloss": "快乐" },
+            { "kana": "ね☆", "kanji": "ね☆", "grammar": "助詞", "gloss": "呢" }
+          ],
+          "trans": "大家一起开开心心吧☆"
+        }
+      ]
+    },
+    {
+      "id": "サビ",
+      "lines": [
+        {
+          "singer": "合唱",
+          "words": [
+            { "kana": "さあ", "kanji": "さあ", "grammar": "感動詞", "gloss": "来吧" },
+            { "kana": "ここ", "kanji": "ここ", "grammar": "指示詞", "gloss": "这里" },
+            { "kana": "へ", "kanji": "へ", "grammar": "助詞", "gloss": "往" },
+            { "kana": "おいで", "kanji": "おいで", "grammar": "名詞", "gloss": "过来" },
+            { "kana": "よ", "kanji": "よ", "grammar": "助詞", "gloss": "哦" }
+          ],
+          "trans": "来吧，快到这边来"
+        },
+        {
+          "singer": "合唱",
+          "words": [
+            { "kana": "たまに", "kanji": "偶に", "grammar": "副詞", "gloss": "偶尔" },
+            { "kana": "は", "kanji": "は", "grammar": "助詞", "gloss": "（强调）" },
+            { "kana": "ちょっと", "kanji": "ちょっと", "grammar": "副詞", "gloss": "稍微" },
+            { "kana": "ぼうけん", "kanji": "冒険", "grammar": "名詞", "gloss": "冒险" },
+            { "kana": "して", "kanji": "して", "grammar": "サ変動詞", "gloss": "做做" },
+            { "kana": "みない？", "kanji": "みない？", "grammar": "動詞（ない形）", "gloss": "不试试" },
+            { "kana": "わたしたち", "kanji": "私たち", "grammar": "名詞", "gloss": "我们" },
+            { "kana": "と", "kanji": "と", "grammar": "助詞", "gloss": "一起" }
+          ],
+          "trans": "偶尔也来场冒险吧？和我们一起"
+        },
+        {
+          "singer": "合唱",
+          "words": [
+            { "kana": "いっしょ", "kanji": "一緒", "grammar": "名詞", "gloss": "一起" },
+            { "kana": "に", "kanji": "に", "grammar": "助詞", "gloss": "地" },
+            { "kana": "あじわおう", "kanji": "味わおう", "grammar": "動詞（意向形）", "gloss": "品味吧" },
+            { "kana": "いま", "kanji": "今", "grammar": "名詞", "gloss": "现在" },
+            { "kana": "この", "kanji": "この", "grammar": "指示詞", "gloss": "这个" },
+            { "kana": "しゅんかん", "kanji": "瞬間", "grammar": "名詞", "gloss": "瞬间" },
+            { "kana": "を", "kanji": "を", "grammar": "助詞", "gloss": "把" }
+          ],
+          "trans": "一起细细品味当下这一瞬间"
+        }
+      ]
+    },
+    {
+      "id": "Aメロ2",
+      "lines": [
+        {
+          "singer": "花帆",
+          "words": [
+            { "kana": "あれ", "kanji": "あれ", "grammar": "指示詞", "gloss": "那个" },
+            { "kana": "も", "kanji": "も", "grammar": "助詞", "gloss": "也" },
+            { "kana": "だめ", "kanji": "駄目", "grammar": "名詞", "gloss": "不行" },
+            { "kana": "それ", "kanji": "それ", "grammar": "指示詞", "gloss": "那个" },
+            { "kana": "も", "kanji": "も", "grammar": "助詞", "gloss": "也" },
+            { "kana": "だめ", "kanji": "駄目", "grammar": "名詞", "gloss": "不行" },
+            { "kana": "おあずけ", "kanji": "お預け", "grammar": "名詞", "gloss": "暂缓" },
+            { "kana": "ばかり", "kanji": "ばかり", "grammar": "名詞", "gloss": "尽是" }
+          ],
+          "trans": "那个不行这个也不行，全都被搁置着"
+        },
+        {
+          "singer": "花帆",
+          "words": [
+            { "kana": "なんで", "kanji": "何で", "grammar": "疑問詞", "gloss": "为什么" },
+            { "kana": "どうして", "kanji": "どうして", "grammar": "疑問詞", "gloss": "为什么" },
+            { "kana": "こんな", "kanji": "こんな", "grammar": "指示詞", "gloss": "这种" },
+            { "kana": "ところ", "kanji": "所", "grammar": "形式名詞", "gloss": "地步" },
+            { "kana": "まで", "kanji": "まで", "grammar": "助詞", "gloss": "连…都" },
+            { "kana": "シュガーレス", "kanji": "シュガーレス", "grammar": "名詞", "gloss": "无糖" }
+          ],
+          "trans": "为什么为什么，连这种地方都无糖"
+        },
+        {
+          "singer": "梢",
+          "words": [
+            { "kana": "ゆめ", "kanji": "夢", "grammar": "名詞", "gloss": "梦想" },
+            { "kana": "を", "kanji": "を", "grammar": "助詞", "gloss": "把" },
+            { "kana": "みる", "kanji": "見る", "grammar": "動詞（原形）", "gloss": "追逐" },
+            { "kana": "カロリー", "kanji": "カロリー", "grammar": "名詞", "gloss": "卡路里" },
+            { "kana": "は", "kanji": "は", "grammar": "助詞", "gloss": "（主题）" },
+            { "kana": "けずらない", "kanji": "削らない", "grammar": "動詞（ない形）", "gloss": "别削减" },
+            { "kana": "で", "kanji": "で", "grammar": "助詞", "gloss": "就" },
+            { "kana": "よ", "kanji": "よ", "grammar": "助詞", "gloss": "呀" }
+          ],
+          "trans": "做着梦呢，卡路里可别削减呀"
+        },
+        {
+          "singer": "梢",
+          "words": [
+            { "kana": "だって", "kanji": "だって", "grammar": "接続詞", "gloss": "可是" },
+            { "kana": "むり", "kanji": "無理", "grammar": "名詞", "gloss": "勉强" },
+            { "kana": "でしょ", "kanji": "でしょ", "grammar": "助動詞", "gloss": "吧" },
+            { "kana": "ごほうび", "kanji": "ご褒美", "grammar": "名詞", "gloss": "奖励" },
+            { "kana": "が", "kanji": "が", "grammar": "助詞", "gloss": "（主语）" },
+            { "kana": "なきゃ", "kanji": "なきゃ", "grammar": "文法「なくちゃ」", "gloss": "没有的话" }
+          ],
+          "trans": "可是这太勉强了吧，没有奖励可不行"
+        }
+      ]
+    },
+    {
+      "id": "Bメロ2",
+      "lines": [
+        {
+          "singer": "梢",
+          "words": [
+            { "kana": "ヘイ シェイク イット アップ シェイク", "kanji": "Hey, shake it up!! Sh-sh-sh-shake!!", "grammar": "英文", "gloss": "来摇起来" }
+          ],
+          "trans": "嘿，摇起来！！Sh-sh-sh-摇！！"
+        },
+        {
+          "singer": "花帆",
+          "words": [
+            { "kana": "ヘイ シェイク イット アップ シェイク", "kanji": "Hey, shake it up!! Sh-sh-sh-shake!!", "grammar": "英文", "gloss": "来摇起来" }
+          ],
+          "trans": "嘿，摇起来！！Sh-sh-sh-摇！！"
+        },
+        {
+          "singer": "合唱",
+          "words": [
+            { "kana": "はやく", "kanji": "早く", "grammar": "い形容詞", "gloss": "快点" },
+            { "kana": "シェイク イット アップ シェイク", "kanji": "Shake it up!! Sh-sh-sh-shake!!", "grammar": "英文", "gloss": "摇起来" }
+          ],
+          "trans": "快点　摇起来！！Sh-sh-sh-摇！！"
+        },
+        {
+          "singer": "梢",
+          "words": [
+            { "kana": "あたらしい", "kanji": "新しい", "grammar": "い形容詞", "gloss": "崭新" },
+            { "kana": "きみ", "kanji": "君", "grammar": "名詞", "gloss": "你" },
+            { "kana": "を", "kanji": "を", "grammar": "助詞", "gloss": "把" },
+            { "kana": "めしあがれ", "kanji": "召し上がれ", "grammar": "動詞（命令形）", "gloss": "享用吧" }
+          ],
+          "trans": "好好享用焕然一新的你吧"
+        },
+        {
+          "singer": "合唱",
+          "words": [
+            { "kana": "ヘイ シェイク イット アップ シェイク", "kanji": "Hey, shake it up!! Sh-sh-sh-shake!!", "grammar": "英文", "gloss": "来摇起来" }
+          ],
+          "trans": "嘿，摇起来！！Sh-sh-sh-摇！！"
+        },
+        {
+          "singer": "花帆",
+          "words": [
+            { "kana": "おかわり", "kanji": "お代わり", "grammar": "名詞", "gloss": "再来一碗" },
+            { "kana": "しちゃえ", "kanji": "しちゃえ", "grammar": "補助動詞", "gloss": "全都来" },
+            { "kana": "すきな", "kanji": "好きな", "grammar": "な形容詞（連体形）", "gloss": "喜欢的" },
+            { "kana": "だけ", "kanji": "だけ", "grammar": "助詞", "gloss": "尽管" }
+          ],
+          "trans": "喜欢的就尽管再来一碗吧"
+        },
+        {
+          "singer": "合唱",
+          "words": [
+            { "kana": "いく", "kanji": "行く", "grammar": "動詞（原形）", "gloss": "要去了" },
+            { "kana": "よ", "kanji": "よ", "grammar": "助詞", "gloss": "哦" },
+            { "kana": "シェイク イット アップ シェイク", "kanji": "Shake it up!! Sh-sh-sh-shake!!", "grammar": "英文", "gloss": "摇起来" }
+          ],
+          "trans": "要去了哦　摇起来！！Sh-sh-sh-摇！！"
+        },
+        {
+          "singer": "花帆",
+          "words": [
+            { "kana": "はちゃめちゃ", "kanji": "破茶滅茶", "grammar": "副詞", "gloss": "乱七八糟" },
+            { "kana": "わちゃわちゃ", "kanji": "わちゃわちゃ", "grammar": "副詞", "gloss": "闹哄哄" },
+            { "kana": "いい", "kanji": "いい", "grammar": "い形容詞", "gloss": "不错" },
+            { "kana": "かんじ", "kanji": "感じ", "grammar": "名詞", "gloss": "感觉" }
+          ],
+          "trans": "乱哄哄热热闹闹，感觉真好"
+        },
+        {
+          "singer": "合唱",
+          "words": [
+            { "kana": "ヘイ シェイク イット アップ シェイク", "kanji": "Hey, shake it up!! Sh-sh-sh-shake!!", "grammar": "英文", "gloss": "来摇起来" }
+          ],
+          "trans": "嘿，摇起来！！Sh-sh-sh-摇！！"
+        },
+        {
+          "singer": "梢",
+          "words": [
+            { "kana": "げんき", "kanji": "元気", "grammar": "名詞", "gloss": "精神" },
+            { "kana": "が", "kanji": "が", "grammar": "助詞", "gloss": "（主语）" },
+            { "kana": "いちばん", "kanji": "一番", "grammar": "名詞", "gloss": "最重要" },
+            { "kana": "ね☆", "kanji": "ね☆", "grammar": "助詞", "gloss": "呢" }
+          ],
+          "trans": "精神饱满最重要呢☆"
+        }
+      ]
+    },
+    {
+      "id": "サビ2",
+      "lines": [
+        {
+          "singer": "花帆",
+          "words": [
+            { "kana": "さあ", "kanji": "さあ", "grammar": "感動詞", "gloss": "来吧" },
+            { "kana": "ここ", "kanji": "ここ", "grammar": "指示詞", "gloss": "这里" },
+            { "kana": "へ", "kanji": "へ", "grammar": "助詞", "gloss": "往" },
+            { "kana": "おいで", "kanji": "おいで", "grammar": "名詞", "gloss": "过来" },
+            { "kana": "よ", "kanji": "よ", "grammar": "助詞", "gloss": "哦" }
+          ],
+          "trans": "来吧，快到这边来"
+        },
+        {
+          "singer": "梢",
+          "words": [
+            { "kana": "たまに", "kanji": "偶に", "grammar": "副詞", "gloss": "偶尔" },
+            { "kana": "は", "kanji": "は", "grammar": "助詞", "gloss": "（强调）" },
+            { "kana": "ちょっと", "kanji": "ちょっと", "grammar": "副詞", "gloss": "稍微" },
+            { "kana": "ぼうけん", "kanji": "冒険", "grammar": "名詞", "gloss": "冒险" },
+            { "kana": "して", "kanji": "して", "grammar": "サ変動詞", "gloss": "做做" },
+            { "kana": "みない？", "kanji": "みない？", "grammar": "動詞（ない形）", "gloss": "不试试" },
+            { "kana": "わたしたち", "kanji": "私たち", "grammar": "名詞", "gloss": "我们" },
+            { "kana": "と", "kanji": "と", "grammar": "助詞", "gloss": "一起" }
+          ],
+          "trans": "偶尔也来场冒险吧？和我们一起"
+        },
+        {
+          "singer": "花帆",
+          "words": [
+            { "kana": "いっしょ", "kanji": "一緒", "grammar": "名詞", "gloss": "一起" },
+            { "kana": "に", "kanji": "に", "grammar": "助詞", "gloss": "地" },
+            { "kana": "あじわおう", "kanji": "味わおう", "grammar": "動詞（意向形）", "gloss": "品味吧" },
+            { "kana": "いま", "kanji": "今", "grammar": "名詞", "gloss": "现在" },
+            { "kana": "この", "kanji": "この", "grammar": "指示詞", "gloss": "这个" },
+            { "kana": "しゅんかん", "kanji": "瞬間", "grammar": "名詞", "gloss": "瞬间" },
+            { "kana": "を", "kanji": "を", "grammar": "助詞", "gloss": "把" },
+            { "kana": "きみ", "kanji": "君", "grammar": "名詞", "gloss": "你" },
+            { "kana": "も", "kanji": "も", "grammar": "助詞", "gloss": "也" }
+          ],
+          "trans": "一起品味当下这一瞬间，你也来"
+        }
+      ]
+    },
+    {
+      "id": "大サビ",
+      "lines": [
+        {
+          "singer": "合唱",
+          "words": [
+            { "kana": "そう", "kanji": "そう", "grammar": "指示詞", "gloss": "没错" },
+            { "kana": "だ", "kanji": "だ", "grammar": "助動詞", "gloss": "是" },
+            { "kana": "もう", "kanji": "もう", "grammar": "副詞", "gloss": "已经" },
+            { "kana": "がまん", "kanji": "我慢", "grammar": "名詞", "gloss": "忍耐" },
+            { "kana": "きんし", "kanji": "禁止", "grammar": "名詞", "gloss": "禁止" },
+            { "kana": "ね", "kanji": "ね", "grammar": "助詞", "gloss": "哦" }
+          ],
+          "trans": "对了对了，从今往后禁止忍耐哦"
+        },
+        {
+          "singer": "合唱",
+          "words": [
+            { "kana": "きょう", "kanji": "今日", "grammar": "名詞", "gloss": "今天" },
+            { "kana": "くらい", "kanji": "くらい", "grammar": "助詞", "gloss": "至少" },
+            { "kana": "は", "kanji": "は", "grammar": "助詞", "gloss": "（主题）" },
+            { "kana": "チートデイ", "kanji": "チートデイ", "grammar": "名詞", "gloss": "放纵日" },
+            { "kana": "に", "kanji": "に", "grammar": "助詞", "gloss": "当作" },
+            { "kana": "しない？", "kanji": "しない？", "grammar": "動詞（ない形）", "gloss": "不来吗" },
+            { "kana": "わたしたち", "kanji": "私たち", "grammar": "名詞", "gloss": "我们" },
+            { "kana": "と", "kanji": "と", "grammar": "助詞", "gloss": "一起" }
+          ],
+          "trans": "至少今天，不来个放纵日吗？和我们一起"
+        },
+        {
+          "singer": "合唱",
+          "words": [
+            { "kana": "いっしょ", "kanji": "一緒", "grammar": "名詞", "gloss": "一起" },
+            { "kana": "に", "kanji": "に", "grammar": "助詞", "gloss": "地" },
+            { "kana": "あじわおう", "kanji": "味わおう", "grammar": "動詞（意向形）", "gloss": "品味吧" },
+            { "kana": "いま", "kanji": "今", "grammar": "名詞", "gloss": "此刻" },
+            { "kana": "この", "kanji": "この", "grammar": "指示詞", "gloss": "这个" },
+            { "kana": "しゅんかん", "kanji": "瞬間", "grammar": "名詞", "gloss": "瞬间" },
+            { "kana": "いま", "kanji": "今", "grammar": "名詞", "gloss": "此刻" },
+            { "kana": "この", "kanji": "この", "grammar": "指示詞", "gloss": "这个" },
+            { "kana": "しゅんかん", "kanji": "瞬間", "grammar": "名詞", "gloss": "瞬间" },
+            { "kana": "いま", "kanji": "今", "grammar": "名詞", "gloss": "现在" },
+            { "kana": "は", "kanji": "は", "grammar": "助詞", "gloss": "（主题）" },
+            { "kana": "この", "kanji": "この", "grammar": "指示詞", "gloss": "这个" },
+            { "kana": "しゅんかん", "kanji": "瞬間", "grammar": "名詞", "gloss": "瞬间" },
+            { "kana": "を", "kanji": "を", "grammar": "助詞", "gloss": "把" }
+          ],
+          "trans": "一起品味吧　此刻这一瞬间、此刻这一瞬间、就是此刻这一瞬间"
+        }
+      ]
+    },
+    {
+      "id": "アウトロ",
+      "lines": [
+        {
+          "singer": "合唱",
+          "words": [
+            { "kana": "シェイク シェイク", "kanji": "Shake!! Shake!!", "grammar": "英文", "gloss": "摇啊摇" },
+            { "kana": "めいっぱい", "kanji": "目一杯!!", "grammar": "副詞", "gloss": "尽全力" }
+          ],
+          "trans": "摇！！摇！！竭尽全力！！"
+        },
+        {
+          "singer": "合唱",
+          "words": [
+            { "kana": "シェイク シェイク", "kanji": "Shake!! Shake!!", "grammar": "英文", "gloss": "摇啊摇" },
+            { "kana": "せいいっぱい", "kanji": "精一杯!!", "grammar": "副詞", "gloss": "全力以赴" },
+            { "kana": "おどれ", "kanji": "踊れ", "grammar": "動詞（命令形）", "gloss": "跳舞吧" }
+          ],
+          "trans": "摇！！摇！！全力以赴！！起舞吧"
+        },
+        {
+          "singer": "合唱",
+          "words": [
+            { "kana": "シェイク シェイク", "kanji": "Shake!! Shake!!", "grammar": "英文", "gloss": "摇啊摇" },
+            { "kana": "めいっぱい", "kanji": "目一杯!!", "grammar": "副詞", "gloss": "尽全力" }
+          ],
+          "trans": "摇！！摇！！竭尽全力！！"
+        },
+        {
+          "singer": "合唱",
+          "words": [
+            { "kana": "シェイク シェイク", "kanji": "Shake!! Shake!!", "grammar": "英文", "gloss": "摇啊摇" },
+            { "kana": "もういっぱい", "kanji": "もう一杯!!", "grammar": "副詞", "gloss": "再来一杯" },
+            { "kana": "きみ", "kanji": "君", "grammar": "名詞", "gloss": "你" },
+            { "kana": "も", "kanji": "も", "grammar": "助詞", "gloss": "也" }
+          ],
+          "trans": "摇！！摇！！再来一杯！！你也来"
+        },
+        {
+          "singer": "合唱",
+          "words": [
+            { "kana": "シェイク シェイク", "kanji": "Shake!! Shake!!", "grammar": "英文", "gloss": "摇啊摇" },
+            { "kana": "めいっぱい", "kanji": "目一杯!!", "grammar": "副詞", "gloss": "尽全力" }
+          ],
+          "trans": "摇！！摇！！竭尽全力！！"
+        },
+        {
+          "singer": "合唱",
+          "words": [
+            { "kana": "シェイク シェイク", "kanji": "Shake!! Shake!!", "grammar": "英文", "gloss": "摇啊摇" },
+            { "kana": "せいいっぱい", "kanji": "精一杯!!", "grammar": "副詞", "gloss": "全力以赴" },
+            { "kana": "うたえ", "kanji": "歌え", "grammar": "動詞（命令形）", "gloss": "歌唱吧" }
+          ],
+          "trans": "摇！！摇！！全力以赴！！放声歌唱"
+        },
+        {
+          "singer": "合唱",
+          "words": [
+            { "kana": "シェイク シェイク", "kanji": "Shake!! Shake!!", "grammar": "英文", "gloss": "摇啊摇" },
+            { "kana": "めいっぱい", "kanji": "目一杯!!", "grammar": "副詞", "gloss": "尽全力" }
+          ],
+          "trans": "摇！！摇！！竭尽全力！！"
+        },
+        {
+          "singer": "合唱",
+          "words": [
+            { "kana": "シェイク シェイク", "kanji": "Shake!! Shake!!", "grammar": "英文", "gloss": "摇啊摇" },
+            { "kana": "もういっぱい", "kanji": "もう一杯!!", "grammar": "副詞", "gloss": "再来一杯" }
+          ],
+          "trans": "摇！！摇！！再来一杯！！"
+        },
+        {
+          "singer": "合唱",
+          "words": [
+            { "kana": "シェイク シェイク", "kanji": "Shake!! Shake!!", "grammar": "英文", "gloss": "摇啊摇" },
+            { "kana": "ハイ", "kanji": "ハイ", "grammar": "感動詞", "gloss": "来" },
+            { "kana": "かんぱい", "kanji": "乾杯!!", "grammar": "名詞", "gloss": "干杯" }
+          ],
+          "trans": "摇！！摇！！来干杯！！"
+        }
+      ]
+    }
+  ]
+}

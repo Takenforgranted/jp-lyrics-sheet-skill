@@ -1,0 +1,96 @@
+{
+  "title": "神のまにまに",
+  "meta": {
+    "歌": "初音ミク・GUMI・鏡音リン",
+    "作詞・作曲": "れるりり",
+    "収録": "アルバム《聖槍爆裂ボーイ》"
+  },
+  "scheme": "spec",
+  "blocks": [
+    {
+      "id": "Aメロ",
+      "lines": [
+        {
+          "words": [
+            { "kana": "おもいどおり", "kanji": "思い通り", "grammar": "名詞", "gloss": "如愿" },
+            { "kana": "に", "kanji": "に", "grammar": "助詞", "gloss": "于" },
+            { "kana": "いか", "kanji": "行か", "grammar": "動詞（ます形去ます）", "gloss": "进展" },
+            { "kana": "ない", "kanji": "ない", "grammar": "い形容詞", "gloss": "不" },
+            { "kana": "こと", "kanji": "こと", "grammar": "形式名詞", "gloss": "事情" },
+            { "kana": "だらけ", "kanji": "だらけ", "grammar": "名詞", "gloss": "尽是" }
+          ],
+          "trans": "尽是不如意的事情"
+        },
+        {
+          "words": [
+            { "kana": "どう", "kanji": "どう", "grammar": "副詞", "gloss": "怎样" },
+            { "kana": "しよう", "kanji": "しよう", "grammar": "動詞（意向形）", "gloss": "做吧" },
+            { "kana": "も", "kanji": "も", "grammar": "助詞", "gloss": "也" },
+            { "kana": "なく", "kanji": "なく", "grammar": "い形容詞", "gloss": "没法" },
+            { "kana": "じこけんお", "kanji": "自己嫌悪", "grammar": "名詞", "gloss": "自我厌恶" }
+          ],
+          "trans": "无可救药地自我厌恶"
+        },
+        {
+          "words": [
+            { "kana": "やおよろず", "kanji": "八百万", "grammar": "名詞", "gloss": "八百万神" },
+            { "kana": "の", "kanji": "の", "grammar": "助詞", "gloss": "的" },
+            { "kana": "いたみ", "kanji": "痛み", "grammar": "名詞", "gloss": "痛苦" },
+            { "kana": "や", "kanji": "や", "grammar": "助詞", "gloss": "与" },
+            { "kana": "かなしみ", "kanji": "悲しみ", "grammar": "名詞", "gloss": "悲伤" },
+            { "kana": "から", "kanji": "から", "grammar": "助詞", "gloss": "从" }
+          ],
+          "trans": "从八百万神的痛苦与悲伤之中"
+        },
+        {
+          "words": [
+            { "kana": "にげこめる", "kanji": "逃げ込める", "grammar": "動詞（可能形）", "gloss": "能躲进" },
+            { "kana": "ばしょ", "kanji": "場所", "grammar": "名詞", "gloss": "地方" },
+            { "kana": "を", "kanji": "を", "grammar": "助詞", "gloss": "把" },
+            { "kana": "さがしてる", "kanji": "探してる", "grammar": "動詞（ている形）", "gloss": "正在找" }
+          ],
+          "trans": "寻找一处可以躲进去的地方"
+        },
+        {
+          "words": [
+            { "kana": "いっそ", "kanji": "いっそ", "grammar": "副詞", "gloss": "干脆" },
+            { "kana": "いわ", "kanji": "岩", "grammar": "名詞", "gloss": "岩石" },
+            { "kana": "の", "kanji": "の", "grammar": "助詞", "gloss": "的" },
+            { "kana": "すきま", "kanji": "隙間", "grammar": "名詞", "gloss": "缝隙" },
+            { "kana": "に", "kanji": "に", "grammar": "助詞", "gloss": "进" },
+            { "kana": "ひきこもって", "kanji": "引きこもって", "grammar": "動詞（て形）", "gloss": "闭门不出" }
+          ],
+          "trans": "干脆就躲进岩石的缝隙里吧"
+        }
+      ]
+    },
+    {
+      "id": "サビ",
+      "lines": [
+        {
+          "words": [
+            { "kana": "かみ", "kanji": "神", "grammar": "名詞", "gloss": "神明" },
+            { "kana": "の", "kanji": "の", "grammar": "助詞", "gloss": "的" },
+            { "kana": "まにまに", "kanji": "まにまに", "grammar": "副詞", "gloss": "随其" },
+            { "kana": "おおせ", "kanji": "仰せ", "grammar": "名詞", "gloss": "旨意" },
+            { "kana": "の", "kanji": "の", "grammar": "助詞", "gloss": "的" },
+            { "kana": "まま", "kanji": "まま", "grammar": "名詞", "gloss": "原样" },
+            { "kana": "に", "kanji": "に", "grammar": "助詞", "gloss": "照着" }
+          ],
+          "trans": "随神之侧，听神之命"
+        },
+        {
+          "words": [
+            { "kana": "そんな", "kanji": "そんな", "grammar": "指示詞", "gloss": "那样" },
+            { "kana": "ふう", "kanji": "風", "grammar": "名詞", "gloss": "样子" },
+            { "kana": "に", "kanji": "に", "grammar": "助詞", "gloss": "地" },
+            { "kana": "ちきゅう", "kanji": "地球", "grammar": "名詞", "gloss": "地球" },
+            { "kana": "は", "kanji": "は", "grammar": "助詞", "gloss": "（主题）" },
+            { "kana": "まわってる", "kanji": "回ってる", "grammar": "動詞（ている形）", "gloss": "转动着" }
+          ],
+          "trans": "地球就是这样运转起来的"
+        }
+      ]
+    }
+  ]
+}
