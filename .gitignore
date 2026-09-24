@@ -13,3 +13,9 @@ dumps/
 *.bak
 *.tmp
 *.log
+
+# 发布到 SkillHub 的打包产物（可重新生成，不入库）
+dist/
+
+# 本地 Agent 工作数据（记忆/日志），不入库
+.workbuddy/

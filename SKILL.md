@@ -1,21 +1,43 @@
 ---
-title: "日语歌词逐词分解表（粉色 Sheet 样式）"
-summary: "把日文歌曲做成《神のまにまに》同款逐词分解表：罗马音/假名/写法/语法/词义/整句翻译六行表格，数据驱动 JSON -> HTML -> PDF，自带罗马音引擎与浏览器自动探测"
-read_when:
-  - 用户要求做日语歌词分解、歌词笔记、逐词翻译表
-  - 用户提到「歌词表」「Sheet」「分解翻译」且要表格样式
-  - 用户给了一首日文歌想要逐词语法标注
+name: jp-lyrics-sheet
+version: 1.0.0
+author: Takenforgranted
+display_name: 日语歌词逐词分解表
+display_name_en: Japanese Lyrics Word-by-Word Sheet
+category: education
+allowed-tools: Read, Write, Edit, Glob, Grep, Bash, WebSearch, WebFetch
+description: |-
+  把一首日文歌做成《神のまにまに》同款逐词分解表：每句一组表格，逐词一列，六行自上而下为 罗马音 / 假名 / 写法 / 语法标注 / 词义 / 整句翻译，成品为可直接打印的 A4 PDF（HTML 同步产出）。自带假名→罗马音引擎、角色配色推导与 HTML→PDF 工具链，数据驱动，换歌只改 JSON。开源仓库：https://github.com/Takenforgranted/jp-lyrics-sheet-skill
+
+  Use when 用户要求做日语歌词分解、歌词笔记、逐词翻译表，或提到「歌词表」「Sheet 样式」「假名罗马音对照」并要求输出表格 / PDF。
+description_zh: |-
+  输入一首日文歌，产出《神のまにまに》同款逐词六行分解表（罗马音 → 假名 → 写法 → 语法 → 词义 → 整句翻译），一句一组表格，成品是可打印的 A4 PDF，同时输出自包含 HTML。自带假名→罗马音引擎（spec / hepburn 双方案，处理促音、长音、拗音与助词 は/へ/を）、角色配色（填充 / 边框 / 字色由代表色自动推导，字色强制对底色保持 WCAG ≥ 7:1 可读）、以及 doctor / cleanup / desensitize / pack 四个辅助脚本。数据驱动，换一首歌只改 JSON；依赖 Windows 系统字体（MS Mincho / 宋体）与 Chrome 或 Edge。开源仓库：https://github.com/Takenforgranted/jp-lyrics-sheet-skill
+description_en: |-
+  Turn a Japanese song into a word-by-word annotation sheet: each lyric line becomes one table with six rows — romaji, kana, original writing, grammar tag, gloss, full-line translation — exported as a print-ready A4 PDF (self-contained HTML in the same run). Ships with a built-in kana-to-romaji engine (spec / hepburn schemes; handles sokuon, long vowels, yoon and the particles は/へ/を), per-singer palettes (fill / border / text auto-derived from each artist colour, text contrast forced to WCAG >= 7:1 against the fill) and four helper scripts (doctor / cleanup / desensitize / pack). Fully data-driven: a new song only means a new JSON file. Requires Windows system fonts and Chrome or Edge. Open-source repo: https://github.com/Takenforgranted/jp-lyrics-sheet-skill
+examples:
+  - "把《光るなら》做成歌词逐词分解表，输出 PDF"
+  - "这首日文歌做一版带角色配色的逐词表"
+  - "给这段歌词做逐词语法标注和翻译对照表"
 agent_created: true
 ---
 
 # 日语歌词逐词分解表工作流
 
 本 skill 面向「歌词翻译 / 逐词笔记」这类反复使用的场景。成品样式参照《神のまにまに》参考版
-（`assets/reference/sample_kaminomanimani.pdf` / `.png`，既是样式基准也是能跑通的样例，
+（`assets/sample_kaminomanimani.pdf` / `.png`，既是样式基准也是能跑通的样例，
 **已含页首标题区**：居中曲名 + 其下小字信息栏）。
 
 **本 skill 自带完整工具链，不依赖外部模板脚本。** 任何机器装好后先跑
 `doctor.py`，PASS 就可以直接开工。
+
+## 出处 / 致谢 / 许可
+
+- **开源仓库**：<https://github.com/Takenforgranted/jp-lyrics-sheet-skill>（public，自由使用 / 改进，欢迎 issue 与 PR）。
+- **原始作者：YJY**。这套「逐词六行分解表」的样式基准（粉底表格、六行字段排布）、JSON 数据结构与最初的工作流
+  都出自 YJY 的原始作品；本仓库是在其基础上做整理、修复与工具链补齐（浏览器自动探测、页首标题区固化、
+  角色配色推导、`doctor` / `cleanup` / `desensitize` / `pack`），功劳的起点属于 YJY。
+- **免责声明**：本 skill 只负责排版，**不提供歌词数据**；产出的歌词与翻译著作权归各自权利人，
+  仅供个人学习与歌词笔记使用，请勿用于商业用途或整曲公开传播。
 
 ## 目录结构
 
@@ -25,8 +47,8 @@ jp-lyrics-sheet/
 ├── scripts/
 │   ├── romaji.py                     假名→罗马音引擎（含促音/长音/助词规则）
 │   ├── gen_sheet.py                  JSON → HTML 渲染器（含页首标题区；样式都在 CSS 常量里）
-│   ├── build.py                      HTML → PDF（浏览器自动探测）+ 渲 PNG 目检
-│   ├── doctor.py                     环境自检（--smoke 跑端到端，含页首标题区断言）
+│   ├── build.py                      HTML → PDF（浏览器自动探测）+ 品牌图标盖章 + 渲 PNG 目检
+│   ├── doctor.py                     环境自检（--smoke 跑端到端，含页首标题区/品牌图标断言）
 │   ├── cleanup.py                    ★ 收尾清理中间文件（默认 dry-run）
 │   ├── desensitize.py                ★ 打包前脱敏自查（只扫描不改文件）
 │   └── pack.py                       ★ 打包 zip（--verify 顺带跑解压副本自检）
@@ -34,16 +56,23 @@ jp-lyrics-sheet/
 │   ├── grammar_terms.md              语法术语表（--check 拿它校验数据）
 │   └── colors.md                     角色/团队代表色注册表（自动加载、可积累）
 ├── assets/
+│   ├── icon.png                      品牌图标（build.py 盖章到 PDF 每页右上角）
 │   ├── sample_kaminomanimani.json    样例数据（Aメロ+サビ 7 句，可直接跑）
+│   ├── sample_kaminomanimani.pdf     参考成品（样式基准，含页首标题区；与 .json 同名）
+│   ├── sample_kaminomanimani.png     参考成品预览图
 │   ├── sample_mix_shake.json         角色配色完整示例（スリーズブーケ《Mix shake!!》全曲 46 句）
 │   ├── sample_hikaru_nara.json       长曲全曲示例（《光るなら》27 句，演示 `ref` 复用副歌）
 │   ├── sample_sora_no_hako.json      单一「乐队主题色」示例（トゲナシトゲアリ《空の箱》全曲 39 句，
 │   │                                 配 `--legend --labels`；也是字色随底色推导的实测样例）
-│   └── reference/sample_*.pdf|png    参考成品（含页首标题区）
 ├── examples/                         ★ 示例成果：《Mix shake!!》色彩版、《空の箱》单色版（PDF/HTML + 预览图）
 └── tests/
     └── test_romaji.py                罗马音规则回归测试
 ```
+
+> **目录层级硬约束（上架平台要求）**：包内**最多两级目录**（`scripts/`、`references/`、`assets/`、
+> `tests/`、`examples/` 下**不许再建子目录**）。三级路径（如曾经的 `assets/reference/x.pdf`）会被
+> 开放平台判为「目录层级超限」直接拒收，已扁平化为 `assets/sample_kaminomanimani.pdf`。
+> 新增资源前先想清楚：放不进二级目录就换命名前缀，别建第三层。
 
 ## 样式规格（已固化在 `gen_sheet.py` 的 CSS 常量里，别手抄）
 
@@ -59,6 +88,7 @@ jp-lyrics-sheet/
   `page-break-inside:avoid`，`print-color-adjust:exact`（保证粉色底不丢）
 - **页首标题区（硬要求，见下节）**：居中曲名 + 其下小字居中信息栏
 - **角色配色**：`--legend` 顶部渲图例；块/行可指定 `singer`，填充/边框/**字色**三色由代表色 HSL 推导（见下）
+- **品牌图标（PDF 硬要求，见下节）**：`build.py` 把 `assets/icon.png` 盖章到每页右上角
 - 无页眉页脚，纯白背景
 
 要改样式只改 `gen_sheet.py` 里的 `CSS` 常量，改完全跑 `doctor.py --smoke` 目检。
@@ -93,6 +123,22 @@ jp-lyrics-sheet/
 - `doctor.py --smoke` 会断言样例产物开头确实有 `jp-title` / `jp-meta`，缺了直接 FAIL。
 - 只有做「续页 / 局部片段」才可以加 `--no-title` 关掉；常规成品**不要关**。
 - 想换曲名的字体/字号/颜色，改 `CSS` 里的 `div.jp-title` / `div.jp-meta` 两处即可。
+
+## 页眉品牌图标（PDF 硬要求，每页右上角）
+
+**任何一次导出的 PDF，每一页右上角都必须有 skill 图标（`assets/icon.png`）。**
+实现放在 `build.py` 的 `stamp_brand()`：Chrome 打印完成后，用 PyMuPDF 把图标
+（24pt ≈ 8.5mm 见方）插到**纸面**右上角——上边距 14mm × 右边距 10mm 的交角里，
+与正文版面物理隔离，**任何页、任何内容都压不到**，HTML 与分页完全不受影响。
+
+- 每页都盖（`for page in doc`），成品三例（1/6/6 页）已逐页像素验证。
+- `--no-brand` 可关（仅续页/局部片段用）；图标文件缺失或 PyMuPDF 未装时**跳过并警告**，不让导出失败。
+- 依赖：`pip install pymupdf`（可选；只影响盖章，不影响 PDF 本体导出）。
+- `doctor.py --smoke` 会渲出 sample.pdf 第 1 页做**像素断言**：右上角扫不到图标直接 FAIL。
+- **别用 CSS `position:fixed` 在 HTML 里实现这个需求**——Chrome 打印对 fixed 元素的
+  负偏移有怪癖：负 top 会被挪到右下角且只出现一次、负 right 直接被裁掉、
+  `transform: translateY` 同样翻车；正偏移（top:0）虽能逐页重复，但会压到宽信息栏。
+  盖章方案绕开全部这些坑。
 
 ## 角色配色（独唱/合唱分色）
 
@@ -229,11 +275,24 @@ cleanup.py --work-dir . --apply --temp --skill             # 连 %TEMP% 残留�
 `--verify` 会把 zip 解到临时目录（跑完自动删），在**解压副本**里依次跑
 `doctor.py --smoke` + `tests/test_romaji.py` + `desensitize.py`，三项全绿才算这个包能用。
 
+**要上架 WorkBuddy 技能市场（SkillHub）时结构不同**：包内顶层必须是 `jp-lyrics-sheet/`（不是平铺），
+且**目录最多两级**（`assets/` 下不许再有子目录，三级路径会被平台判「目录层级超限」拒收）。
+用发布流程 skill 的脚本打：
+
+```
+%VENV_PYTHON% ~/.workbuddy/skills/workbuddy-skill-publish/scripts/pack_market.py <本目录> \
+    --name jp-lyrics-sheet --verify
+```
+
 ## 坑（都是踩过的）
 
 - **`--print-to-pdf` 的值在 subprocess 列表传参时不能带引号**：写成
   `'--print-to-pdf="C:\x.pdf"'` 会让 Chrome 把引号当文件名一部分，报
   `0x7B 文件名、目录名或卷标语法不正确`。只有 PowerShell 手敲时才靠 shell 剥引号。
+- **Chrome 打印对 `position:fixed` 的负偏移有怪癖**（做每页页眉/水印时必踩）：
+  负 top → 元素跑到**右下角**且只有第 1 页有；负 right → 直接被裁掉；
+  transform 位移同样翻车。要在每页固定位置放东西，用 PDF 后处理盖章
+  （`build.py` 的 `stamp_brand()`），别指望 CSS。
 - 原 SKILL.md 写死的 Edge 路径在只有 Chrome 的机器上直接失效 → 一律走 `build.py` 自动探测。
 - PDF 无文字层时用 pypdfium2 渲成 PNG 再读图，不要只靠 pypdf 抽文本。
 - PowerShell 管道传日文脚本易乱码：一律用 Write 工具写 `.py`/`.json` 文件再执行；
@@ -277,4 +336,4 @@ cleanup.py --work-dir . --apply --temp --skill             # 连 %TEMP% 残留�
 ```
 
 命中会连规则名和上下文一起打出来，逐条确认后按上表替换；`desensitize.py` 自身会被跳过
-（它的规则表必然命中自己）。二进制默认不扫——PDF 内部数据流会把长串十六进制当真凭证误报。
+（它的规则表必然命中自己），`dist/`（打包产物目录）也跳过。二进制默认不扫——PDF 内部数据流会把长串十六进制当真凭证误报。

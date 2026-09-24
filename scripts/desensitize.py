@@ -31,7 +31,9 @@ SKILL = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 SELF = os.path.basename(os.path.abspath(__file__))
 
 # 扫描时要跳过的目录
-SKIP_DIRS = {"_smoke", "__pycache__", ".git", ".workbuddy", ".venv", "node_modules"}
+# dist/ 是打包产物（里面是 zip、发布文案等派生文件，不是要发布出去的 skill 源码），
+# 不跳过的话它会把打包现场的临时内容一起扫进来、把 CLEAN 判定搞脏。
+SKIP_DIRS = {"_smoke", "__pycache__", ".git", ".workbuddy", ".venv", "node_modules", "dist"}
 
 # 二进制素材（默认跳过；--binaries 时才用严格规则扫）
 BINARY_EXT = {".pdf", ".png", ".jpg", ".jpeg", ".gif", ".webp", ".zip", ".ttf", ".ttc", ".ico"}

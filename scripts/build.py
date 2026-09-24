@@ -5,10 +5,16 @@ HTML -> PDF 导出 + 渲染 PNG 目检（浏览器自动探测）
 原 SKILL.md 写死了 Edge 路径，但很多机器上只有 Chrome（或只有 Playwright 的
 chromium）。这里按优先级自动探测，探测不到就直接报清楚。
 
+品牌图标盖章：PDF 产出后，用 PyMuPDF 把 skill 图标（assets/icon.png）盖到
+**每一页**的右上角——位置在纸面顶边距+右边距交角处（A4 上边距 14mm、右边距
+10mm，图标 8.5mm 见方完全落在边距里），物理上不与任何正文重叠，也不影响
+HTML 排版与分页。图标缺失或 PyMuPDF 未安装时跳过并警告，不让导出失败。
+
 用法：
   python build.py sheet.html                  # 同目录产出 sheet.pdf + 预览 PNG
   python build.py sheet.html --out out.pdf
   python build.py sheet.html --png-dir .  --pages 3
+  python build.py sheet.html --no-brand       # 不盖品牌图标
   python build.py --browser                   # 只打印探测到的浏览器
 """
 
@@ -25,6 +31,9 @@ try:
     sys.stdout.reconfigure(encoding="utf-8")
 except Exception:
     pass
+
+SKILL = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
+ICON_PATH = os.path.join(SKILL, "assets", "icon.png")
 
 
 # ---------------------------------------------------------------- 浏览器探测
@@ -115,6 +124,47 @@ def html_to_pdf_playwright(html_path, pdf_path, timeout=120000):
         return False, "Playwright 打印失败：%s" % e
 
 
+# ---------------------------------------------------------------- 品牌图标盖章
+# A4 纸面 595.28 x 841.89 pt。上边距 14mm(39.7pt)、右边距 10mm(28.35pt)，
+# 图标 24pt(8.5mm) 见方，全部落在边距交角里 —— 与正文版面零重叠。
+ICON_SIZE_PT = 24.0
+ICON_TOP_PT = 9.0      # 距纸顶 9pt ≈ 3.2mm
+ICON_RIGHT_PT = 5.0    # 距纸右缘 5pt ≈ 1.8mm
+
+
+def stamp_brand(pdf_path, icon_path=ICON_PATH):
+    """把品牌图标盖到 PDF 每一页右上角。返回 (ok, msg)。
+
+    用 PyMuPDF(fitz) 做页面级插入，不改文字层、不动内容流其余部分；
+    成功后原子替换原文件。
+    """
+    if not os.path.exists(icon_path):
+        return False, "缺图标文件 %s，跳过盖章" % icon_path
+    try:
+        try:
+            import pymupdf as fitz  # PyMuPDF 新名（>=1.24）
+        except ImportError:
+            import fitz  # 旧名兜底
+    except Exception as e:
+        return False, "PyMuPDF 不可用（pip install pymupdf），跳过盖章：%s" % e
+    try:
+        doc = fitz.open(pdf_path)
+        tmp = pdf_path + ".brand.tmp"
+        for page in doc:
+            w = page.rect.width
+            x1 = w - ICON_RIGHT_PT
+            x0 = x1 - ICON_SIZE_PT
+            y0 = ICON_TOP_PT
+            y1 = y0 + ICON_SIZE_PT
+            page.insert_image(fitz.Rect(x0, y0, x1, y1), filename=icon_path)
+        doc.save(tmp, garbage=3, deflate=True)
+        doc.close()
+        os.replace(tmp, pdf_path)
+        return True, "品牌图标已盖到每页右上角"
+    except Exception as e:
+        return False, "盖章失败（PDF 本体不受影响）：%s" % e
+
+
 def pdf_to_png(pdf_path, png_dir, pages=3):
     """pypdfium2 渲染前 N 页 PNG，用于目检。"""
     try:
@@ -140,6 +190,7 @@ def main():
     ap.add_argument("--png-dir", help="预览 PNG 输出目录（默认 PDF 同目录）")
     ap.add_argument("--pages", type=int, default=3, help="预览页数，默认 3")
     ap.add_argument("--no-png", action="store_true", help="跳过 PNG 预览")
+    ap.add_argument("--no-brand", action="store_true", help="不盖品牌图标（仅续页/片段用）")
     ap.add_argument("--browser", action="store_true", help="只打印探测到的浏览器")
     args = ap.parse_args()
 
@@ -174,6 +225,10 @@ def main():
             print("[ERR] " + msg)
             return 1
     print("[OK] %s (%d 字节) — %s" % (pdf, os.path.getsize(pdf), msg))
+
+    if not args.no_brand:
+        ok2, msg2 = stamp_brand(pdf)
+        print("[OK] %s" % msg2 if ok2 else "[warn] %s" % msg2)
 
     if not args.no_png:
         png_dir = args.png_dir or os.path.dirname(pdf) or "."

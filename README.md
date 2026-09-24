@@ -4,7 +4,7 @@
 >
 > **这是一个 Agent Skill**：装上之后交给 Agent 调用即可，一句话出 PDF，不需要自己敲命令。
 
-![示例：神のまにまに](assets/reference/sample_kaminomanimani.png)
+![示例：神のまにまに](assets/sample_kaminomanimani.png)
 
 > **特别致谢：本 skill 的原始作者是 YJY。**
 > 这套「逐词六行分解表」的样式基准、字段设计与工作流思路都源自 YJY 的原始作品。
@@ -30,6 +30,7 @@
 | **Agent 直接接手** | 装好后用自然语言下需求即可；工作流、字段约束、校验与收尾清理全部沉淀在 `SKILL.md` |
 | **六行逐词表格** | 每句一组表格，逐词一列：罗马音 → 假名 → 写法 → 语法 → 词义 → 整句翻译 |
 | **页首标题区** | 成品开头固定为**居中曲名** + 其下**小字居中的信息栏**（作詞 / 作曲 / 編曲 / 歌 / Center / 収録） |
+| **品牌图标** | 导出 PDF 时自动把 skill 图标**盖章到每一页右上角**（纸面边距区内，不压正文、不影响排版；`--no-brand` 可关） |
 | **罗马音引擎** | 内置假名→罗马音转换，处理促音、长音、拗音、助词 `は/へ/を`；支持 `spec` 与 `hepburn` 双方案 |
 | **角色配色** | 独唱 / 合唱分色，**填充 / 边框 / 字色**三色由代表色按 HSL 自动推导；字色强制对底色保持 WCAG ≥ 7:1（AAA 级可读）；代表色注册表可积累复用 |
 | **打印友好** | A4 竖版、`page-break-inside: avoid`、`print-color-adjust: exact`，粉底不会丢 |
@@ -285,20 +286,24 @@ jp-lyrics-sheet/
 │   └── colors.md                角色 / 团队代表色注册表（自动加载、可积累）
 ├── assets/
 │   ├── sample_kaminomanimani.json   样例数据（Aメロ + サビ 7 句，可直接跑）
+│   ├── sample_kaminomanimani.pdf|png 参考成品（含页首标题区）
 │   ├── sample_mix_shake.json        角色配色完整示例（全曲 46 句）
 │   ├── sample_hikaru_nara.json      长曲全曲示例（《光るなら》27 句，演示 ref 复用副歌）
 │   ├── sample_sora_no_hako.json     单主题色示例（《空の箱》全曲 39 句，演示 --labels 与字色推导）
-│   └── reference/                   参考成品 PDF / PNG
 ├── examples/                    示例成果（《Mix shake!!》全曲色彩版 + 《空の箱》单色版，各含 PDF / 预览图）
 └── tests/
     └── test_romaji.py           罗马音规则回归测试
 ```
 
+> **目录最多两级**：`scripts/`、`references/`、`assets/`、`tests/`、`examples/` 下不再建子目录——
+> 上架 WorkBuddy 技能市场时，三级路径（如曾经的 `assets/reference/x.pdf`）会被判「目录层级超限」而拒收。
+> `sample_mix_shake.json`、`sample_hikaru_nara.json`、`sample_sora_no_hako.json` 保留在 `assets/` 根下。
+
 ## 工具链速查
 
 | 脚本 | 用途 |
 | --- | --- |
-| `doctor.py [--smoke]` | 环境 + 罗马音 + 配色推导自检；`--smoke` 追加端到端样例并断言页首标题区 |
+| `doctor.py [--smoke]` | 环境 + 罗马音 + 配色推导自检；`--smoke` 追加端到端样例并断言页首标题区与 PDF 品牌图标 |
 | `cleanup.py --work-dir . [--apply]` | 清理工作区中间产物，**默认 dry-run**，白名单模式，保守优先 |
 | `desensitize.py [--binaries]` | 打包前扫个人敏感信息（用户名路径 / 密钥 / 邮箱 / 主机名…），只扫描不改文件 |
 | `pack.py --out x.zip [--verify]` | 平铺打 zip；`--verify` 解压到临时目录跑三项自检 |

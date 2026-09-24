@@ -140,6 +140,26 @@ def main():
             print(r.stdout.decode("utf-8", "replace").strip())
             if r.returncode != 0:
                 fail += 1
+            # 品牌图标是硬要求：build.py 盖章到每页右上角（纸面边距区）
+            pdf = os.path.join(out, "sample.pdf")
+            if os.path.exists(pdf):
+                try:
+                    import pypdfium2 as pdfium
+                    import numpy as np
+                    pg = pdfium.PdfDocument(pdf)[0]
+                    a = np.array(pg.render(scale=2).to_pil().convert("L"))
+                    h, w = a.shape
+                    zone = a[: int(h * 0.05), int(w * 0.94):]
+                    if int((zone < 200).sum()) > 200:
+                        print("%s smoke 品牌图标 已盖章（PDF 每页右上角）" % OK)
+                    else:
+                        print("%s smoke PDF 右上角没扫到品牌图标" % BAD)
+                        fail += 1
+                except Exception as e:
+                    print("[warn] 品牌图标像素断言跳过：%s" % e)
+            else:
+                print("%s smoke 未产出 sample.pdf" % BAD)
+                fail += 1
 
     print("\n结论: %s" % ("PASS" if fail == 0 else "FAIL (%d 项)" % fail))
     return 0 if fail == 0 else 1
